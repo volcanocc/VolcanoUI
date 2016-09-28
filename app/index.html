@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Volcano UI -- Document</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root  directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/document.css -->
+    <link rel="stylesheet" href="styles/document.css">
+    <!-- endbuild -->
+
+    <link rel="stylesheet" href="styles/volcano.css">
+
+    <!-- build:css styles/doc/tootik.min.css -->
+    <link rel="stylesheet" href="styles/doc/tootik.min.css">
+    <!-- endbuild -->
+
+    <!-- build:css styles/doc/code-color.min.css -->
+    <link rel="stylesheet" href="styles/doc/color-brewer.css">
+    <!-- endbuild -->
+
+</head>
+<body>
+
+<header class="v-header">
+
+
+    <nav class="v-nav hidden-mobile">
+        <div class="logo"></div>
+        <ul class="v-menu">
+            <li class="active"><a href="javascript:;">Button</a></li>
+            <li><a href="javascript:;">Forms</a></li>
+            <li><a href="javascript:;">Grid</a></li>
+            <li><a href="javascript:;">Table</a></li>
+        </ul>
+    </nav>
+
+
+</header>
+
+<main class="main">
+
+    <div class="content">
+        <section class="button">
+            <h1>按钮</h1>
+            <h3>轻松创建多种样式按钮，改变一个类即可调整外观，颜色，大小</h3>
+
+            <!-- 类型 -->
+            <div class="doc-wrap" id="type">
+                <p class="description">可作为按钮使用的标签或元素</p>
+
+                <div class="demo-wrap">
+
+                    <span class="title">默认样式</span>
+
+                    <div class="example">
+                        <a class="v-button" href="#" role="button">Link</a>
+                        <button class="v-button" type="submit">Button</button>
+                        <input class="v-button" type="button" value="Input">
+                        <input class="v-button" type="submit" value="Submit">
+                    </div>
+
+                    <div class="highlight">
+                        <a href="javascript:;" data-clipboard-action="copy" data-clipboard-target="#button-type" data-tootik="复制" class="clipboard-btn">
+                            <img src="images/doc/clippy.svg" width="13" alt="">
+                        </a>
+                        <pre><code id="button-type">&lt;!-- 可使用的标签 --&gt;
+&lt;a class="v-button" href="#"&gt;Link&lt;/a&gt;
+&lt;button class="v-button" type="submit"&gt;Button&lt;/button&gt;
+&lt;input class="v-button" type="button" value="Input"&gt;
+&lt;input class="v-button" type="submit" value="Submit"&gt;
+</code></pre>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- 样式 -->
+            <div class="doc-wrap" id="style">
+                <p class="description">使用下面列出的类可以快速创建一个带有预定义样式的按钮</p>
+
+                <div class="demo-wrap">
+
+                    <span class="title">
+                        外观： 默认 <code>.line</code> <code>.radius</code> <code>.circle</code> <code>.link</code> <code>.min-width</code>
+                        <br/>
+                        颜色： 默认 <code>.primary</code> <code>.secondary</code> <code>.demitint</code>
+                        <br/>
+                        图标： 增加 <code>&lt;i class="icon-**"&gt;</code>
+                    </span>
+
+                    <div class="example">
+                        <!-- 预定义样式 -->
+                        <button type="button" class="v-button primary">Button</button>
+                        <button type="button" class="v-button primary line">Button</button>
+                        <button type="button" class="v-button primary radius">Button</button>
+                        <button type="button" class="v-button primary circle">C</button>
+                        <button type="button" class="v-button link">Link</button>
+                        <br/>
+                        <!-- 次要样式 -->
+                        <button type="button" class="v-button secondary">Button</button>
+                        <!-- 中间色样式 -->
+                        <button type="button" class="v-button demitint">Button</button>
+                        <br/>
+                        <!-- 固定宽样式 -->
+                        <button type="button" class="v-button primary min-width">min-width</button>
+                        <!-- 图标样式 -->
+                        <button type="button" class="v-button primary">
+                            <i class="icon-cloud-upload"></i>
+                        </button>
+                    </div>
+
+                    <div class="highlight">
+                        <a href="javascritp:;" data-clipboard-action="copy" data-clipboard-target="#button-style" data-tootik="复制" class="clipboard-btn">
+                            <img src="images/doc/clippy.svg" width="13" alt="">
+                        </a>
+                        <pre><code id="button-style">&lt;!-- 预定义样式 --&gt;
+&lt;button type="button" class="v-button primary"&gt;Button&lt;/button&gt;
+&lt;button type="button" class="v-button primary line"&gt;Button&lt;/button&gt;
+&lt;button type="button" class="v-button primary radius"&gt;Button&lt;/button&gt;
+&lt;button type="button" class="v-button primary circle"&gt;C&lt;/button&gt;
+&lt;button type="button" class="v-button link"&gt;Link&lt;/button&gt;
+
+&lt;!-- 次要样式 --&gt;
+&lt;button type="button" class="v-button secondary"&gt;Button&lt;/button&gt;
+
+&lt;!-- 中间色样式 --&gt;
+&lt;button type="button" class="v-button demitint"&gt;Button&lt;/button&gt;
+
+&lt;!-- 固定宽样式 --&gt;
+&lt;button type="button" class="v-button primary min-width"&gt;min-width&lt;/button&gt;
+
+&lt;!-- 图标样式 --&gt;
+&lt;button type="button" class="v-button primary"&gt;
+    &lt;i class="icon-cloud-upload"&gt;&lt;/i&gt;
+&lt;/button&gt;
+</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 尺寸 -->
+            <div class="doc-wrap" id="size">
+                <p class="description">获得不同尺寸的按钮</p>
+
+                <div class="demo-wrap">
+                    <span class="title">添加 <code>.large</code> <code>.small</code> <code>.mini</code> 类改变按钮尺寸</span>
+
+                    <div class="example">
+                        <!-- 按钮尺寸 -->
+                        <button type="button" class="v-button primary large">Button</button>
+                        <button type="button" class="v-button primary">Button</button>
+                        <button type="button" class="v-button primary small">Button</button>
+                        <button type="button" class="v-button primary mini">Button</button>
+                    </div>
+
+                    <div class="highlight">
+                        <a href="javascritp:;" data-clipboard-action="copy" data-clipboard-target="#button-size" data-tootik="复制" class="clipboard-btn">
+                            <img src="images/doc/clippy.svg" width="13" alt="">
+                        </a>
+                        <pre><code id="button-size">&lt;!-- 按钮尺寸 --&gt;
+&lt;button type="button" class="v-button primary large"&gt;Button&lt;/button&gt;
+&lt;button type="button" class="v-button primary"&gt;Button&lt;/button&gt;
+&lt;button type="button" class="v-button primary small"&gt;Button&lt;/button&gt;
+&lt;button type="button" class="v-button primary mini"&gt;Button&lt;/button&gt;
+</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 禁用状态 -->
+            <div class="doc-wrap" id="disabled">
+                <p class="description">禁用状态</p>
+
+                <div class="demo-wrap">
+                    <span class="title">按钮禁用 <code>.disabled</code></span>
+
+                    <div class="example">
+                        <!-- 禁用状态 -->
+                        <button type="button" class="v-button primary disabled">Button</button>
+                    </div>
+
+                    <div class="highlight">
+                        <a href="javascritp:;" data-clipboard-action="copy" data-clipboard-target="#button-state" data-tootik="复制" class="clipboard-btn">
+                            <img src="images/doc/clippy.svg" width="13" alt="">
+                        </a>
+                        <pre><code id="button-state">&lt;!-- 禁用状态 --&gt;
+&lt;button type="button" class="v-button primary disabled"&gt;Button&lt;/button&gt;
+</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 按钮组 -->
+            <div class="doc-wrap" id="buttonGroup">
+                <p class="description">按钮组,将多个按钮组合在一起</p>
+
+                <div class="demo-wrap">
+                    <span class="title">
+                        按钮组支持预置颜色<code>.primary</code> <code>.secondary</code> <code>.demitint</code>和尺寸<code>.large</code> <code>.small</code> <code>.mini</code>
+                        <br/>
+                        可定义单一按钮颜色，不建议单独定义尺寸
+                    </span>
+
+                    <div class="example">
+                        <!-- 预置样式 -->
+                        <div class="v-button-group">
+                            <a href="javascript:;" class="v-button primary">Left</a>
+                            <a href="javascript:;" class="v-button primary">Middle</a>
+                            <a href="javascript:;" class="v-button primary">Right</a>
+                        </div>
+                        <!-- 自定义样式 -->
+                        <div class="v-button-group">
+                            <a href="javascript:;" class="v-button"><i class="icon-align-left"></i></a>
+                            <a href="javascript:;" class="v-button"><i class="icon-align-center"></i></a>
+                            <a href="javascript:;" class="v-button"><i class="icon-align-right"></i></a>
+                            <a href="javascript:;" class="v-button demitint"><i class="icon-layers"></i></a>
+                        </div>
+                        <br/>
+                        <br/>
+                        <!-- 图标样式 -->
+                        <div class="v-button-group">
+                            <a href="javascript:;" class="v-button"><i class="icon-skip-back"></i></a>
+                            <a href="javascript:;" class="v-button"><i class="icon-stop"></i></a>
+                            <a href="javascript:;" class="v-button"><i class="icon-skip-forward"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="highlight">
+                        <a href="javascritp:;" data-clipboard-action="copy" data-clipboard-target="#button-group" data-tootik="复制" class="clipboard-btn">
+                            <img src="images/doc/clippy.svg" width="13" alt="">
+                        </a>
+                        <pre><code id="button-group">&lt;!-- 预置样式 --&gt;
+&lt;div class="v-button-group"&gt;
+    &lt;a href="#" class="v-button primary"&gt;Left&lt;/a&gt;
+    &lt;a href="#" class="v-button primary"&gt;Middle&lt;/a&gt;
+    &lt;a href="#" class="v-button primary"&gt;Right&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;!-- 自定义样式 --&gt;
+&lt;div class="v-button-group"&gt;
+    &lt;a href="#" class="v-button"&gt;&lt;i class="icon-align-left"&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;a href="#" class="v-button"&gt;&lt;i class="icon-align-center"&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;a href="#" class="v-button"&gt;&lt;i class="icon-align-right"&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;a href="#" class="v-button demitint"&gt;&lt;i class="icon-layers"&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;!-- 图标样式 --&gt;
+&lt;div class="v-button-group"&gt;
+    &lt;a href="#" class="v-button"&gt;&lt;i class="icon-skip-back"&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;a href="#" class="v-button"&gt;&lt;i class="icon-stop"&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;a href="#" class="v-button"&gt;&lt;i class="icon-skip-forward"&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 标签按钮 -->
+            <div class="doc-wrap" id="buttonLabel">
+                <p class="description">标签按钮</p>
+
+                <div class="demo-wrap">
+
+                    <span class="title">
+                        标签按钮支持预置颜色<code>.primary</code> <code>.secondary</code> <code>.demitint</code>和尺寸<code>.large</code> <code>.small</code> <code>.mini</code>
+                    </span>
+
+                    <div class="example">
+
+                        <!-- 按钮样式 -->
+                        <div class="v-button-label primary">
+                            <a href="javascript:;" class="v-button"><i class="icon-heart"></i> Like </a>
+                            <span class="label">
+                                2,048
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <div class="highlight">
+                        <a href="javascript:;" data-clipboard-action="copy" data-clipboard-target="#button-label" data-tootik="复制" class="clipboard-btn">
+                            <img src="images/doc/clippy.svg" width="13" alt="">
+                        </a>
+                        <pre><code id="button-label">&lt;!-- 预置样式 --&gt;
+&lt;div class="v-button-label primary"&gt;
+    &lt;a href="#" class="v-button"&gt;&lt;i class="icon-heart"&gt;&lt;/i&gt; Like &lt;/a&gt;
+    &lt;span class="label"&gt;
+        2,048
+    &lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- 图标按钮 -->
+            <div class="doc-wrap" id="buttonIcon">
+                <p class="description">图标按钮</p>
+
+                <div class="demo-wrap">
+
+                    <span class="title">
+                        图标按钮同样支持内置样式
+                    </span>
+
+                    <div class="example">
+
+                        <!-- 按钮样式 -->
+                        <a href="javascript:;" class="v-button primary label-icon small">
+                            <i class="icon-mail"></i>
+                            Send
+                        </a>
+
+                    </div>
+
+                    <div class="highlight">
+                        <a href="javascritp:;" data-clipboard-action="copy" data-clipboard-target="#button-icon" data-tootik="复制" class="clipboard-btn">
+                            <img src="images/doc/clippy.svg" width="13" alt="">
+                        </a>
+                        <pre><code id="button-icon">&lt;!-- 预置样式 --&gt;
+&lt;div class="v-button-label"&gt;
+    &lt;a href="#" class="v-button"&gt;&lt;i class="icon-heart"&gt;&lt;/i&gt; Like &lt;/a&gt;
+    &lt;span class="label"&gt;
+        2,048
+    &lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- 块样式 -->
+            <div class="doc-wrap" id="buttonBlock">
+                <p class="description">块级按钮</p>
+
+                <div class="demo-wrap">
+
+                    <span class="title">添加 <code>.block</code> 类可以将其拉伸至父元素100%的宽度，按钮变为块级元素</span>
+
+                    <div class="example">
+
+                        <!-- 默认 -->
+                        <a href="javascript:;" class="v-button primary block">Button</a>
+                        <!-- Icon -->
+                        <a href="javascript:;" class="v-button primary label-icon block">
+                            <i class="icon-mail"></i>
+                            Button
+                        </a>
+
+                    </div>
+
+                    <div class="highlight">
+                        <a href="javascritp:;" data-clipboard-action="copy" data-clipboard-target="#button-block" data-tootik="复制" class="clipboard-btn">
+                            <img src="images/doc/clippy.svg" width="13" alt="">
+                        </a>
+                        <pre><code id="button-block">&lt;!-- 预置样式 --&gt;
+&lt;a href="javascript:;" class="v-button primary block"&gt;Button&lt;/a&gt;
+
+&lt;!-- 图标样式 --&gt;
+&lt;a href="javascript:;" class="v-button primary label-icon block"&gt;
+    &lt;i class="icon-mail"&gt;&lt;/i&gt;
+    Button
+&lt;/a&gt;
+</code></pre>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+
+    <div class="navigation">
+        <div class="menu-wrap">
+            <span class="ele-name">Button</span>
+            <ul id="nav">
+                <li class="current"><a href="#type">可作为按钮使用的标签或元素</a></li>
+                <li><a href="#style">预定义样式</a></li>
+                <li><a href="#size">尺寸</a></li>
+                <li><a href="#disabled">禁用状态</a></li>
+                <li><a href="#buttonGroup">按钮组</a></li>
+                <li><a href="#buttonLabel">标签样式</a></li>
+                <li><a href="#buttonIcon">图标按钮</a></li>
+                <li><a href="#buttonBlock">块级按钮</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+
+    </footer>
+</main>
+
+
+
+<!-- build:js scripts/jquery-3.1.0.min.js -->
+<script src="scripts/jquery-3.1.0.min.js"></script>
+<!-- endbuild -->
+
+<!-- build:js scripts/doc/jquery.nav.js -->
+<script src="scripts/doc/jquery.nav.js"></script>
+<!-- endbuild -->
+
+<!-- build:js scripts/doc/highlight.min.js -->
+<script src="scripts/doc/highlight.min.js"></script>
+<!-- endbuild -->
+
+<!-- build:js scripts/doc/clipboard.min.js -->
+<script src="scripts/doc/clipboard.min.js"></script>
+<!-- endbuild -->
+
+<!-- build:js scripts/doc/document.js -->
+<script src="scripts/doc/document.js"></script>
+<!-- endbuild -->
+
+
+
+</body>
+</html>

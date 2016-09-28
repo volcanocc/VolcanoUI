@@ -1,0 +1,635 @@
+/* Button
+   ========================================================================== */
+button:focus {
+    outline: none;
+}
+
+@mixin button-default {
+    &:hover {
+        color: $button-color;
+        background-color: $button-hover-background;
+        transition: $button-transition;
+    }
+
+    &:focus,
+    &:active {
+        color: $button-color;
+        background-color: $button-hover-background;
+    }
+}
+
+@mixin button-primary {
+    color: $button-primary-color;
+    background-color: $button-primary-background;
+    border: $button-border-n;
+
+    &:hover {
+        color: $button-primary-color;
+        background-color: $button-primary-hover-background;
+        box-shadow: $button-primary-hover-shadow;
+        transition: $button-transition;
+    }
+
+    &:focus,
+    &:active {
+        color: $button-primary-color;
+        background-color: $button-primary-active-background;
+    }
+}
+
+@mixin button-secondary {
+    color: $button-secondary-color;
+    background-color: $button-secondary-background;
+
+    &:hover {
+        color: $button-secondary-hover-color;
+        background-color: $button-secondary-hover-background;
+        box-shadow: $button-secondary-hover-shadow;
+        transition: $button-transition;
+    }
+
+    &:focus,
+    &:active {
+        color: $button-secondary-color;
+        background-color: $button-secondary-active-background;
+    }
+}
+
+@mixin button-accent {
+    color: $button-accent-color;
+    background-color: $button-accent-background;
+    border: $button-border-n;
+
+    &:hover {
+        color: $button-accent-color;
+        background-color: $button-accent-hover-background;
+        box-shadow: $shadow-accent;
+        transition: $button-transition;
+    }
+
+    &:focus,
+    &:active {
+        color: $button-accent-color;
+        background-color: $accent-color-dark;
+    }
+}
+
+@mixin button-disabled {
+    color: $button-disabled-color;
+    background-color: $button-disabled-background;
+    cursor: default;
+
+    &:hover {
+        color: $button-disabled-color;
+        background-color: $button-disabled-background;
+        box-shadow: none;
+        cursor: default;
+    }
+
+    &:focus,
+    &:active {
+        color: $button-disabled-color;
+        background-color: $button-disabled-background;
+        cursor: default;
+    }
+}
+
+
+.v-button {
+    position: relative;
+    display: inline-block;
+    height: $button-height;
+    line-height: $button-height - 2;
+    padding: $button-padding;
+    font-size: $button-font-size;
+    text-align: center;
+    border: 1px solid $button-border-color;
+    background-color: $button-background;
+    color: $button-color;
+    border-radius: $button-radius;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    outline: 0;
+    text-decoration: none;
+    vertical-align: middle;
+    -webkit-tap-highlight-color: transparent;
+    box-sizing: border-box;
+    transition: $button-transition;
+    cursor: pointer;
+
+    @include button-default;
+
+    &.primary {
+        @include button-primary;
+    }
+
+    &.secondary {
+        @include button-secondary;
+    }
+
+    &.accent {
+        @include button-accent;
+    }
+
+    // Mini button
+    &.mini {
+        height: $button-mini-height;
+        line-height: $button-mini-height;
+        font-size: $button-mini-font-size;
+        padding: $button-mini-padding;
+
+        &.radius {
+            border-radius: $button-mini-height / 2;
+        }
+
+        &.circle {
+            width: $button-mini-height;
+        }
+
+        i {
+            font-size: $button-mini-i-font-size;
+        }
+
+        &.label-icon {
+
+            padding-left: 2.8rem;
+
+            i {
+                width: $button-mini-height;
+                line-height: $button-mini-height - 4;
+            }
+        }
+
+    }
+
+    // Small button
+    &.small {
+        height: $button-small-height;
+        line-height: $button-small-height;
+
+        &.radius {
+            border-radius: $button-small-height / 2;
+        }
+
+        &.circle {
+            width: $button-small-height;
+        }
+
+        i {
+            font-size: $button-small-i-font-size;
+        }
+
+        &.label-icon {
+
+            i {
+                width: $button-small-height;
+                line-height: $button-small-height - 4;
+            }
+        }
+    }
+
+    // Large button
+    &.large {
+        height: $button-large-height;
+        line-height: $button-large-height;
+        font-size: $button-large-font-size;
+
+        &.radius {
+            border-radius: $button-large-height / 2;
+        }
+
+        &.circle {
+            width: $button-large-height;
+        }
+
+        i {
+            font-size: $button-large-i-font-size;
+        }
+
+        &.label-icon {
+
+            padding-left: 5.2rem;
+
+            i {
+                width: $button-large-height;
+                line-height: $button-large-height - 4;
+            }
+        }
+    }
+
+    // Line button
+    &.line {
+        border: 2px solid $button-border-color;
+        line-height: $button-line-line-height;
+
+        &.primary {
+            color: $primary-color;
+            background: transparent;
+            border-color: $primary-color;
+
+            &:hover {
+                background: $primary-color;
+                color: #fff;
+            }
+
+            &:focus,
+            &:active {
+                color: $button-primary-color;
+                background-color: $button-primary-active-background;
+            }
+        }
+
+        &.secondary {
+            color: $button-color;
+            background: transparent;
+            border-color: $secondary-color;
+
+            &:hover {
+                color: $button-color;
+                background: $secondary-color;
+            }
+            &:focus,
+            &:active {
+                color: $button-color;
+                background-color: $secondary-color-dark;
+            }
+        }
+
+        &.accent {
+            color: $accent-color;
+            background: transparent;
+            border-color: $accent-color;
+
+            &:hover {
+                background: $accent-color;
+                color: #fff;
+            }
+
+            &:focus,
+            &:active {
+                color: $button-primary-color;
+                background-color: $button-accent-active-background;
+            }
+        }
+
+        &.mini {
+            line-height: $button-mini-height - 4;
+        }
+
+        &.small {
+            line-height: $button-small-height - 4;
+        }
+
+        &.large {
+            line-height: $button-large-height - 4;
+        }
+
+    }
+
+    //Radius button
+    &.radius {
+        border-radius: $button-height / 2;
+    }
+
+    //Circle button
+    &.circle {
+        width: $button-height;
+        padding: 0;
+        border-radius: 50%;
+    }
+
+    //Link button
+    &.link {
+        color: darken($primary-color, 10%);
+        background: none;
+        padding: 0 1rem;
+        border: $button-border-n;
+
+        &:hover {
+            color: lighten($primary-color, 10%);
+            background: none;
+            box-shadow: none;
+        }
+
+        &:focus,
+        &:active {
+            color: darken($primary-color, 10%);
+            background: none;
+            box-shadow: none;
+        }
+
+        &.disabled {
+            background-color: transparent;
+            &:hover {
+                background-color: transparent;
+            }
+
+            &:focus,
+            &:active {
+                background-color: transparent;
+            }
+        }
+    }
+
+    //Flat button
+    &.flat {
+        color: darken($primary-color, 10%);
+        background: none;
+        padding: 0 1rem;
+        border: $button-border-n;
+
+        &:hover {
+            color: lighten($primary-color, 10%);
+            background: $secondary-color-light;
+            box-shadow: none;
+        }
+
+        &:focus,
+        &:active {
+            color: darken($primary-color, 10%);
+            background: $secondary-color-light;
+            box-shadow: none;
+        }
+
+        &.disabled {
+            background-color: transparent;
+            &:hover {
+                background-color: transparent;
+            }
+
+            &:focus,
+            &:active {
+                background-color: transparent;
+            }
+        }
+    }
+
+    //Disabled button
+    &.disabled {
+        @include button-disabled;
+    }
+
+    i {
+        font-size: $button-i-font-size;
+    }
+
+    &.label-icon {
+
+        padding-left: 4.8rem;
+
+        &.primary {
+
+            i {
+                background-color: darken($button-primary-background, 6%);
+            }
+
+        }
+
+        &.secondary {
+
+            i {
+                background-color: darken($button-secondary-background, 6%);
+            }
+
+        }
+
+        &.accent {
+
+            i {
+                background-color: darken($button-accent-background, 6%);
+            }
+
+        }
+
+        i {
+            position: absolute;
+            left: 0;
+            height: 100%;
+            width: $button-height;
+            line-height: $button-height - 4;
+            text-align: center;
+            background-color: darken($button-background, 6%);
+        }
+
+        &.disabled {
+            i {
+                background-color: darke$button-disabled-background;
+            }
+        }
+    }
+
+    //Min-width
+    &.min-width {
+        min-width: $button-min-width;
+    }
+
+    //Button block
+    &.block {
+        display: block;
+    }
+
+}
+
+/* Button-group
+   ========================================================================== */
+.v-button-group {
+
+    display: inline-block;
+    font-size: $button-group-font-size;
+
+    .v-button:not(:last-child) {
+        border-right: 0;
+    }
+
+    .v-button {
+        padding: 0 2rem;
+        border-radius: $button-group-radius;
+    }
+
+    //Mini
+    &.mini {
+
+        .v-button {
+            height: $button-mini-height;
+            line-height: $button-mini-height;
+            font-size: $button-mini-font-size;
+
+            i {
+                font-size: $button-mini-i-font-size;
+            }
+
+        }
+    }
+
+    //Small
+    &.small {
+
+        .v-button {
+            height: $button-small-height;
+            line-height: $button-small-height + 2;
+            font-size: $button-small-font-size;
+
+            i {
+                font-size: $button-small-i-font-size;
+            }
+
+        }
+    }
+
+    //Large
+    &.large {
+
+        .v-button {
+            height: $button-large-height;
+            line-height: $button-large-height;
+            font-size: $button-large-font-size;
+
+            i {
+                font-size: $button-large-i-font-size;
+            }
+
+        }
+    }
+
+    .v-button:first-child {
+        border-radius: $button-group-first-radius;
+    }
+
+    .v-button:last-child {
+        border-radius: $button-group-last-radius;
+    }
+
+}
+
+/* Button-label
+   ========================================================================== */
+.v-button-label {
+
+    display: inline-block;
+    font-size: 0;
+
+    .label {
+        display: inline-block;
+        height: $button-height;
+        line-height: $button-height - 2;
+        border: 1px solid $button-border-color;
+        padding: $button-label-padding;
+        margin-left: -2px;
+        font-size: $button-font-size;
+        border-radius: $button-label-radius;
+        vertical-align: middle;
+        box-sizing: border-box;
+    }
+
+    .v-button {
+        &:hover {
+            color: $button-color;
+            background-color: $button-hover-background;
+            transition: $button-transition;
+        }
+    }
+
+    &.primary {
+        .v-button {
+            @include button-primary;
+        }
+        .label {
+            border: 1px solid $primary-color;
+        }
+    }
+
+    &.secondary {
+        .v-button {
+            @include button-secondary;
+        }
+        .label {
+            border: 1px solid $secondary-color;
+        }
+    }
+
+    &.accent {
+        .v-button {
+            @include button-accent;
+        }
+        .label {
+            border: 1px solid $accent-color;
+        }
+    }
+
+    i {
+        margin: $button-label-i-margin;
+    }
+
+    .v-button {
+        border-radius: $button-label-first-radius;
+        padding: $button-label-button-padding;
+
+        &:hover {
+            box-shadow: none;
+        }
+    }
+
+    //Mini
+    &.mini {
+
+        .v-button {
+            height: $button-mini-height;
+            line-height: $button-mini-height;
+
+            i {
+                font-size: $button-mini-i-font-size;
+            }
+
+        }
+
+        .label {
+            height: $button-mini-height;
+            line-height: $button-mini-height - 2;
+        }
+
+    }
+
+    //Small
+    &.small {
+
+        .v-button {
+            height: $button-small-height;
+            line-height: $button-small-height;
+
+            i {
+                font-size: $button-small-i-font-size;
+            }
+
+        }
+
+        .label {
+            height: $button-small-height;
+            line-height: $button-small-height - 2;
+        }
+
+    }
+
+    //Large
+    &.large {
+
+        .v-button {
+            height: $button-large-height;
+            line-height: $button-large-height;
+
+            i {
+                font-size: $button-large-i-font-size;
+            }
+
+        }
+
+        .label {
+            height: $button-large-height;
+            line-height: $button-large-height - 2;
+        }
+
+    }
+}
+

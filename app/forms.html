@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Volcano UI -- Forms</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root  directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/volcano.css">
+    <!-- endbuild -->
+
+</head>
+<body>
+
+<div style="width: 90%; margin: 20px" class="clearfix">
+
+    <h1>input</h1>
+
+    <div class="v-input-control">
+        <label for="name">First Name：</label>
+        <input placeholder="Placeholder" class="v-input" id="name" type="text" required>
+    </div>
+
+    <div class="v-input-control">
+        <label for="telephone">Telephone：</label>
+        <input placeholder="Placeholder" class="v-input" id="telephone" type="text">
+    </div>
+
+    <div class="v-input-control">
+        <label for="first_name">姓名：</label>
+        <input placeholder="Placeholder" class="v-input" id="first_name" type="text">
+        <span class="tips">Please enter your name</span>
+    </div>
+
+    <div class="v-input-control error">
+        <label for="first_name1">姓名：</label>
+        <input placeholder="Placeholder" class="v-input" id="first_name1" type="text" required>
+        <span class="tips error">Please enter your name</span>
+    </div>
+
+    <div class="v-input-control inline">
+        <label for="first_name2">姓名：</label>
+        <input placeholder="Placeholder" class="v-input" id="first_name2" type="text">
+    </div>
+
+    <div class="v-input-control inline label-width">
+        <label for="first_name3">姓名：</label>
+        <input placeholder="Placeholder" class="v-input" id="first_name3" type="text">
+        <span class="tips">Please enter your name</span>
+    </div>
+
+    <div class="v-input-control inline label-width">
+        <label for="first_name4" class="text-right">姓名：</label>
+        <input placeholder="Placeholder" class="v-input" id="first_name4" type="text">
+    </div>
+
+
+</div>
+
+
+<div style="width: 90%; margin: 20px" class="clearfix">
+
+
+    <div class="v-input-control">
+        <label for="first_name5">Input disabled：</label>
+        <input placeholder="Placeholder" class="v-input" value="disabled" id="first_name5" type="text" required
+               disabled>
+    </div>
+
+    <div class="v-input-control large">
+        <label for="first_name5">Input large：</label>
+        <input placeholder="Placeholder" class="v-input" value="test value" id="first_name5" type="text" required>
+    </div>
+
+    <div class="v-input-control small">
+        <label for="first_name6">Input small：</label>
+        <input placeholder="Placeholder" class="v-input" id="first_name6" type="text" required>
+    </div>
+
+</div>
+
+
+<div style="width: 90%; margin: 20px" class="clearfix">
+
+    <div class="v-input-control inline radius">
+        <label for="first_name8">Input radius：</label>
+        <input placeholder="Placeholder" class="v-input" id="first_name8" type="text" required>
+    </div>
+
+    <div class="v-input-control radius">
+        <label for="first_name9">Input radius：</label>
+        <input placeholder="Placeholder" class="v-input" id="first_name9" type="text">
+    </div>
+
+    <div class="v-input-control">
+        <label for="first_name10">Input large：</label>
+        <input placeholder="Placeholder" class="v-input" id="first_name10" type="text">
+    </div>
+
+
+</div>
+
+
+<div style="width: 90%; margin: 20px" class="clearfix">
+
+    <div class="v-input-control inline">
+        <label>Input file：</label>
+        <button type="button" class="v-input-file v-button primary">
+            上传文件
+            <input type="file">
+        </button>
+        <span class="file-path">forms.html</span>
+    </div>
+
+
+</div>
+
+
+<div style="width: 90%; margin: 20px" class="clearfix">
+
+    <h1>select</h1>
+
+    <div class="v-select-control">
+        <label>Select</label>
+        <select name="" id="" class="v-select">
+            <option>New York</option>
+            <option>Paris</option>
+            <option>Melbourne</option>
+        </select>
+    </div>
+
+    <div class="v-select-control large">
+        <label>Select large</label>
+        <select name="" id="" class="v-select">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+        </select>
+    </div>
+
+    <div class="v-select-control small">
+        <label>Select small</label>
+        <select name="" id="" class="v-select">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+        </select>
+    </div>
+
+    <div class="v-select-control radius">
+        <label>Select radius</label>
+        <select name="" id="" class="v-select">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+        </select>
+    </div>
+
+    <div class="v-select-control inline">
+        <label>inline</label>
+        <select name="" id="" class="v-select">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+        </select>
+    </div>
+
+    <div class="v-select-control inline radius">
+        <label>radius</label>
+        <select name="" id="" class="v-select">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+        </select>
+    </div>
+
+    <div class="v-select-control inline">
+        <label>Select inline</label>
+        <select name="" id="" class="v-select">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+        </select>
+    </div>
+    <div class="v-select-control inline label-width">
+        <label class="text-right">Select inline</label>
+        <select name="" id="" class="v-select">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+        </select>
+    </div>
+
+    <div class="v-select-control">
+        <label>Select disabled</label>
+        <select name="" id="" class="v-select" disabled>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+        </select>
+    </div>
+
+    <div class="v-select-control error">
+        <label>Select error</label>
+        <select name="" id="" class="v-select">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+        </select>
+        <span class="tips">Please enter your name</span>
+    </div>
+
+
+</div>
+
+
+<div style="width: 90%; margin: 20px" class="clearfix">
+
+    <h1>checkbox</h1>
+
+    <div class="v-check">
+
+
+        <input type="checkbox" id="cd-checkbox-1">
+        <label for="cd-checkbox-1">Option 1</label>
+    </div>
+
+    <div class="v-check">
+        <input type="checkbox" id="cd-checkbox-2">
+        <label for="cd-checkbox-2">Option 2</label>
+    </div>
+
+    <div class="v-check">
+        <input type="checkbox" id="cd-checkbox-3">
+        <label for="cd-checkbox-3">Option 3</label>
+    </div>
+
+    <div class="clearfix"></div>
+    <h1>radio</h1>
+
+    <div class="v-check">
+        <input type="radio" name="radio-button" id="cd-radio-1">
+        <label for="cd-radio-1">Choice 3</label>
+    </div>
+    <div class="v-check">
+        <input type="radio" name="radio-button" id="cd-radio-2">
+        <label for="cd-radio-2">Choice 3</label>
+    </div>
+    <div class="v-check">
+        <input type="radio" name="radio-button" id="cd-radio-3">
+        <label for="cd-radio-3">Choice 3</label>
+    </div>
+
+
+</div>
+
+
+
+
+<div style="width: 90%; margin: 20px" class="clearfix">
+
+    <h1>textarea</h1>
+    <textarea class="v-textarea" rows="6"></textarea>
+</div>
+
+
+
+
+
+<!-- build:js scripts/vendor.js -->
+<!-- bower:js -->
+<!-- endbower -->
+<!-- endbuild -->
+
+
+<!-- build:js scripts/main.js -->
+<script src="scripts/main.js"></script>
+<!-- endbuild -->
+
+</body>
+</html>

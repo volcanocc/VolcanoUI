@@ -1,0 +1,254 @@
+/* Base
+   ========================================================================== */
+[class*='v-grid-'] {
+    position: relative;
+    float: left;
+    padding: 0 $grid-gutter;
+    width: 100%;
+    word-break: break-all;
+    box-sizing: border-box;
+}
+
+.container {
+    width: $container-width;
+    margin: 0 auto;
+    @include clearfix;
+}
+
+.container-fluid {
+    width: 100%;
+    @include clearfix;
+}
+
+.v-row {
+    margin-right: -$grid-gutter;
+    margin-left: -$grid-gutter;
+    margin-bottom: $row-margin-bottom;
+    @include clearfix;
+}
+
+/*  v-grid mobile
+   ========================================================================== */
+.v-grid-mobile-12 {
+    width: 100%;
+}
+
+.v-grid-mobile-11 {
+    width: 91.666663%;
+}
+
+.v-grid-mobile-10 {
+    width: 83.33%;
+}
+
+.v-grid-mobile-9 {
+    width: 74.999997%;
+}
+
+.v-grid-mobile-8 {
+    width: 66.66666664%;
+}
+
+.v-grid-mobile-7 {
+    width: 58.333%;
+}
+
+.v-grid-mobile-6 {
+    width: 50%;
+}
+
+.v-grid-mobile-5 {
+    width: 41.6665%;
+}
+
+.v-grid-mobile-4 {
+    width: 33.33%;
+}
+
+.v-grid-mobile-3 {
+    width: 24.99%;
+}
+
+.v-grid-mobile-2 {
+    width: 16.66666%;
+}
+
+.v-grid-mobile-1 {
+    width: 8.33%;
+}
+
+/* v-grid small 720px+
+   ========================================================================== */
+@media (min-width: $media-screen-small) {
+    .v-grid-12 {
+        width: 100%;
+    }
+    .v-grid-11 {
+        width: 91.666663%;
+    }
+    .v-grid-10 {
+        width: 83.33%;
+    }
+    .v-grid-9 {
+        width: 74.999997%;
+    }
+    .v-grid-8 {
+        width: 66.66666664%;
+    }
+    .v-grid-7 {
+        width: 58.333%;
+    }
+    .v-grid-6 {
+        width: 50%;
+    }
+    .v-grid-5 {
+        width: 41.6665%;
+    }
+    .v-grid-4 {
+        width: 33.33%;
+    }
+    .v-grid-3 {
+        width: 24.99%;
+    }
+    .v-grid-2 {
+        width: 16.66666%;
+    }
+    .v-grid-1 {
+        width: 8.33%;
+    }
+
+    .v-grid-s-12 {
+        width: 100%;
+    }
+    .v-grid-s-11 {
+        width: 91.666663%;
+    }
+    .v-grid-s-10 {
+        width: 83.33%;
+    }
+    .v-grid-s-9 {
+        width: 74.999997%;
+    }
+    .v-grid-s-8 {
+        width: 66.66666664%;
+    }
+    .v-grid-s-7 {
+        width: 58.333%;
+    }
+    .v-grid-s-6 {
+        width: 50%;
+    }
+    .v-grid-s-5 {
+        width: 41.6665%;
+    }
+    .v-grid-s-4 {
+        width: 33.33%;
+    }
+    .v-grid-s-3 {
+        width: 24.99%;
+    }
+    .v-grid-s-2 {
+        width: 16.66666%;
+    }
+    .v-grid-s-1 {
+        width: 8.33%;
+    }
+}
+
+/* v-grid middle 1024px+
+   ========================================================================== */
+@media (min-width: $media-screen-middle) {
+
+    .container {
+        width: $container-middle-width;
+        margin: 0 auto;
+    }
+
+    .v-grid-m-12 {
+        width: 100%;
+    }
+    .v-grid-m-11 {
+        width: 91.666663%;
+    }
+    .v-grid-m-10 {
+        width: 83.33%;
+    }
+    .v-grid-m-9 {
+        width: 74.999997%;
+    }
+    .v-grid-m-8 {
+        width: 66.66666664%;
+    }
+    .v-grid-m-7 {
+        width: 58.333%;
+    }
+    .v-grid-m-6 {
+        width: 50%;
+    }
+    .v-grid-m-5 {
+        width: 41.6665%;
+    }
+    .v-grid-m-4 {
+        width: 33.33%;
+    }
+    .v-grid-m-3 {
+        width: 24.99%;
+    }
+    .v-grid-m-2 {
+        width: 16.66666%;
+    }
+    .v-grid-m-1 {
+        width: 8.33%;
+    }
+}
+
+/* v-grid large 1200px+
+   ========================================================================== */
+@media (min-width: $media-screen-large) {
+
+    .container {
+        width: $container-large-width;
+        margin: 0 auto;
+    }
+
+    .v-grid-l-12 {
+        width: 100%;
+    }
+    .v-grid-l-11 {
+        width: 91.666663%;
+    }
+    .v-grid-l-10 {
+        width: 83.33%;
+    }
+    .v-grid-l-9 {
+        width: 74.999997%;
+    }
+    .v-grid-l-8 {
+        width: 66.66666664%;
+    }
+    .v-grid-l-7 {
+        width: 58.333%;
+    }
+    .v-grid-l-6 {
+        width: 50%;
+    }
+    .v-grid-l-5 {
+        width: 41.6665%;
+    }
+    .v-grid-l-4 {
+        width: 33.33%;
+    }
+    .v-grid-l-3 {
+        width: 24.99%;
+    }
+    .v-grid-l-2 {
+        width: 16.66666%;
+    }
+    .v-grid-l-1 {
+        width: 8.33%;
+    }
+}
+
+
+
+

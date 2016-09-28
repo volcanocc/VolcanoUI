@@ -1,0 +1,236 @@
+@import "_color.scss";
+
+/* ==========================================================================
+   volcano variables
+   ========================================================================== */
+/**
+ *
+ *  Colors
+ *  Grid
+ *  shadow
+ *  Buttons
+ *  Forms
+ *  Tables
+ *  responsive
+ *
+ */
+
+/* Colors
+   ========================================================================== */
+$primary-color: $volcano-blue;
+$primary-color-light: lighten($primary-color, 6%);
+$primary-color-dark: darken($primary-color, 6%);
+
+$secondary-color: $volcano-light-gray;
+$secondary-color-light: lighten($secondary-color, 6%);
+$secondary-color-dark: darken($secondary-color, 6%);
+
+$accent-color: $volcano-green;
+$accent-color-light: lighten($accent-color, 3%);
+$accent-color-dark: darken($accent-color, 6%);
+
+$info-color: $volcano-info;
+$success-color: $volcano-success;
+$error-color: $volcano-danger;
+$link-color: $primary-color;
+
+/* Media screen
+   ========================================================================== */
+$media-screen-small: 720px;
+$media-screen-middle: 1024px;
+$media-screen-large: 1200px;
+
+/* Grid
+   ========================================================================== */
+$container-width: 90%;
+$container-middle-width: 960px;
+$container-large-width: 1180px;
+$row-margin-bottom: 16px;
+//grid-padding
+$grid-gutter: 6px;
+
+/* Shadow
+   ========================================================================== */
+$shadow-primary: 0 6px 16px 0 rgba($primary-color, .2), 0 6px 20px 0 rgba($primary-color, .19);
+$shadow-secondary: 0 2px 5px 0 rgba($secondary-color, .37), 0 2px 10px 0 rgba($secondary-color, .5);
+$shadow-accent: 0 6px 16px 0 rgba($accent-color, .2), 0 6px 20px 0 rgba($accent-color, .19);
+$shadow-dn: none;
+
+/* Buttons
+   ========================================================================== */
+// Shared styles
+$button-font-size: 1.4rem;
+$button-color: rgb(51, 51, 51);
+$button-border-color: rgb(218, 218, 218);
+$button-background: rgb(255, 255, 255);
+$button-height: 36px;
+$button-padding: 0 2.6rem;
+$button-radius: 3px;
+$button-i-font-size: 1.8rem;
+$button-transition: .3s ease-out;
+$button-hover-background: darken($button-background, 6%);
+$button-border-n: 0;
+
+// Primary buttons
+$button-primary-color: rgb(255, 255, 255);
+$button-primary-background: $primary-color;
+
+// Primary hover,active buttons
+$button-primary-hover-background: $primary-color-light;
+$button-primary-hover-shadow: $shadow-primary;
+$button-primary-active-background: $primary-color-dark;
+
+// Secondary buttons
+$button-secondary-color: rgb(51, 51, 51);
+$button-secondary-background: $secondary-color;
+
+// Secondary hover,active buttons
+$button-secondary-hover-color: rgb(51, 51, 51);
+$button-secondary-hover-background: $secondary-color-light;
+$button-secondary-hover-shadow: $shadow-secondary;
+$button-secondary-active-background: $secondary-color-dark;
+
+// accent buttons
+$button-accent-color: rgb(255, 255, 255);
+$button-accent-background: $accent-color;
+
+// accent hover,active buttons
+$button-accent-hover-background: $accent-color-light;
+$button-accent-hover-shadow: $shadow-accent;
+$button-accent-active-background: $accent-color-dark;
+
+// Mini buttons
+$button-mini-font-size: 1.2rem;
+$button-mini-height: 24px;
+$button-mini-padding: 0 1rem;
+$button-mini-i-font-size: 1.4rem;
+
+// Small buttons
+$button-small-font-size: 1rem;
+$button-small-height: 32px;
+$button-small-i-font-size: 1.8rem;
+
+// Large buttons
+$button-large-font-size: 1.6rem;
+$button-large-height: 42px;
+$button-large-i-font-size: 2rem;
+
+// Radius buttons
+$button-radius-radius: 50%;
+
+// Line buttons
+$button-line-width: 2px;
+$button-line-border-color: $primary-color;
+$button-line-line-height: $button-height - 4;
+
+// Circle buttons
+$button-circle-background: $primary-color;
+$button-circle-background-hover: $primary-color-light;
+$button-circle-radius: 50%;
+
+// Disabled styles
+$button-disabled-background: rgb(239, 239, 239);
+$button-disabled-color: rgb(167, 167, 167);
+
+// Button group
+$button-group-font-size: 0;
+$button-group-radius: 0;
+$button-group-first-radius: 3px 0 0 3px;
+$button-group-last-radius: 0 3px 3px 0;
+
+//Button label
+$button-label-padding: 0 1rem;
+$button-label-radius: 0 3px 3px 0;
+$button-label-i-margin: 0 3px 0 0;
+$button-label-i-font-size: 1.6rem;
+$button-label-first-radius: 3px 0 0 3px;
+$button-label-button-padding: 0 1rem 0 1.2rem;
+
+//Button min-width
+$button-min-width: 118px;
+
+/* Forms
+   ========================================================================== */
+
+// Text Inputs + Textarea
+$input-height: 36px;
+$input-large: 42px;
+$input-small: 32px;
+$input-color: #333;
+$input-background: #fff;
+$input-padding: 0 12px;
+$input-border-color: rgb(210, 210, 210);
+$input-border: 1px solid $input-border-color;
+$input-margin-right: 16px;
+$input-radius: 3px;
+$input-error-color: $error-color;
+$input-focus-shadow: 0 0 2px 0 rgba($primary-color, .12), 0 0 4px 0 rgba($primary-color, .18);
+$input-error-shadow: 0 0 2px 0 rgba($input-error-color, .12), 0 0 4px 0 rgba($input-error-color, .18);
+$input-focus-border-color: lighten($primary-color, 10%);
+$input-font-size: 1.4rem;
+$input-transition: all .3s;
+$input-disabled-color: #000;
+$input-disabled-solid-color: #BDBDBD;
+$input-disabled-border: 1px solid $input-disabled-solid-color;
+$input-placeholder-color: #b8b8b8;
+$input-group-margin: 0 0 22px 0;
+$input-control-inline-margin: 0 0 24px 0;
+$input-control-inline-label-width: 86px;
+$input-control-radius-margin-left: 12px;
+$horizontal-label-pdt: 6px;
+$horizontal-small-label-pdt: 4px;
+$horizontal-large-label-pdt: 9px;
+
+// Select
+$select-height: 36px;
+$select-large: 42px;
+$select-small: 32px;
+$select-border-color: rgb(210, 210, 210);
+$select-border: 1px solid $select-border-color;
+$select-color: #333;
+$select-background: rgba(255, 255, 255, .9);
+$select-padding: 0 12px;
+$select-margin-right: 16px;
+$select-radius: 3px;
+$select-placeholder-text-color: #b8b8b8;
+$select-option-color: #333;
+$select-error-color: $error-color;
+$select-focus-shadow: 0 0 2px 0 rgba($primary-color, .12), 0 0 4px 0 rgba($primary-color, .18);
+$select-error-shadow: 0 0 2px 0 rgba($input-error-color, .12), 0 0 4px 0 rgba($input-error-color, .18);
+$select-focus-border-color: lighten($primary-color, 10%);
+$select-disabled-color: rgba(0, 0, 0, .26);
+$select-disabled-border: 1px solid $input-disabled-color;
+$select-group-margin: 0 0 16px 0;
+$select-group-inline-label-width: 80px;
+$select-group-radius-margin-left: 12px;
+
+// Label
+$label-font-size: 1.2rem;
+$label-color: #666;
+
+// Tips
+$tips-color: #999;
+$tips-font: 1.2rem;
+
+// Checkbox & Radio
+$checkbox-radio-background: $primary-color-dark;
+$checkbox-radio-shadow: 0 0 5px rgba($primary-color-dark, 0.6);
+$checkbox-radio-margin: 0 16px 0 0;
+$checkbox-radio-label-width: 86px;
+$checkbox-radius: 3px;
+$radio-radius: 50%;
+
+/* Tables
+   ========================================================================== */
+$table-color: #666;
+$table-margin: 0 0 12px 0;
+$table-thead-color: #333;
+$table-thead-background: #fafafa;
+$table-border-color: #eee;
+$table-bordered-color: #ddd;
+$table-striped-color: #f9f9f9;
+$table-td-padding: 8px 12px;
+$table-th-padding: 8px 12px;
+$table-td-padding-condensed: 4px 12px;
+$table-checkbox-margin: 0;
+

@@ -1,0 +1,325 @@
+@charset "utf-8";
+
+/**
+* @file:      Volcano UI -- Document V1.0.0
+* @author:    CAN
+* @update:    2016-8-5;
+* @copyright: MIT License
+* @doc:       README.md
+*/
+@import "components/_reset";
+@import "components/_variables";
+@import "components/_common";
+@import "components/_color";
+@import "components/_responsive";
+@import "components/_icons";
+
+body {
+    background: #eff3f6;
+}
+
+.v-header {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.v-nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 217px;
+    height: 100%;
+    z-index: 999;
+    background: #fff;
+}
+
+.v-nav .logo {
+    display: block;
+    width: 112px;
+    height: 112px;
+    margin: 60px auto;
+    background-color: #dbdcdd;
+}
+
+.v-menu {
+    padding-left: 52px;
+}
+
+.v-menu li {
+    position: relative;
+}
+
+.v-menu li.active a {
+    font-weight: 600;
+}
+
+.v-menu li.active::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 21px;
+    left: -54px;
+    width: 46px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #d20000;
+}
+
+.v-menu li a {
+    display: block;
+    padding: 10px 0;
+    color: #999;
+}
+
+.main {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+
+    @include clearfix;
+}
+
+.content {
+    width: 100%;
+    padding: 12px;
+    float: left;
+    box-sizing: border-box;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+section h1 {
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+section h3 {
+    font-size: 1.6rem;
+    line-height: 1.4;
+    margin-bottom: 12px;
+}
+
+section .description {
+    font-size: 1.4rem;
+    line-height: 1.2;
+    color: #666;
+    padding-left: 8px;
+    border-left: 3px solid $primary-color;
+}
+
+.example .v-button {
+    margin: 0 20px 20px 0;
+}
+
+.example .v-button-group .v-button, .example .v-button-label .v-button, .v-input-group .v-button, .example form .v-button, .v-input-file, .v-table .v-button {
+    margin: 0 !important;
+}
+
+.grid .example .v-row div[class*='v-grid-'] {
+    background-color: #e8e8e8;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.button .v-button-label, .button .v-button-group {
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.doc-wrap {
+    padding-top: 32px;
+}
+
+.demo-wrap {
+    position: relative;
+    border: 1px solid #eee;
+    border-radius: 3px;
+    margin: 20px 0;
+    padding-top: 20px;
+    background-color: #fff;
+    transition: 0.3s linear;
+}
+
+.demo-wrap .title code {
+    padding: 2px 4px;
+    margin: 0 2px;
+    font-size: 90%;
+    color: #c7254e;
+    background-color: #f9f2f4;
+    border-radius: 3px;
+}
+
+.demo-wrap:hover {
+    box-shadow: rgba(0, 0, 0, 0.1) 0 1px 6px, rgba(0, 0, 0, 0.1) 0 1px 4px;
+    transition: 0.3s linear;
+}
+
+.demo-wrap .example {
+    padding: 20px 26px;
+}
+
+.demo-wrap .title {
+    display: block;
+    font-size: 1.2rem;
+    padding: 5px 25px 16px 25px;
+    box-sizing: border-box;
+    color: #999;
+}
+
+.highlight {
+    position: relative;
+}
+
+.highlight pre {
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    word-break: normal;
+    white-space: pre;
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+}
+
+pre {
+    display: block;
+    font-size: 13px;
+    line-height: 1.42857143;
+    color: #333;
+    word-break: break-all;
+    word-wrap: break-word;
+    background: transparent;
+    border: 0;
+}
+
+.highlight pre code {
+    display: block;
+    padding: 1rem 2.2rem;
+    margin: 0;
+    line-height: 1.42857143;
+    border: 0;
+    background-color: #f9f9f9;
+    border-top: 1px solid #eee;
+}
+
+.clipboard-btn {
+    position: absolute !important;
+    top: 0;
+    right: 0;
+    width: 32px;
+    height: 22px;
+    font-size: 1.8rem;
+    background: #e3e3e3;
+    border-radius: 0 0 0 3px;
+
+    &:hover {
+        background: #d1d1d1;
+    }
+
+    img {
+        margin: 3px 0 0 10px;
+        opacity: 0.6;
+    }
+}
+
+.navigation {
+    position: relative;
+    display: none;
+
+    .menu-wrap {
+        width: 100%;
+        padding: 20px 0 60px 36px;
+        border-left: 1px solid #dcdcdc;
+        box-sizing: border-box;
+
+        .ele-name {
+            font-weight: 600;
+        }
+
+        ul {
+            margin-top: 20px;
+        }
+
+        ul li {
+            position: relative;
+            margin: 6px 0;
+            font-size: 1.2rem;
+
+            a {
+                color: #666;
+
+                &:hover {
+                    color: #d20000;
+                }
+            }
+
+            &.current a {
+                color: #d20000;
+            }
+
+            &.current {
+                &::before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: -36px;
+                    width: 2px;
+                    height: 18px;
+                    background-color: #d20000;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    height: 160px;
+    padding-left: 217px;
+
+    .footer-wrap {
+        padding: 12px;
+    }
+}
+
+@media (min-width: $media-screen-small) {
+    .main {
+        padding-left: 217px;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+}
+
+@media (min-width: $media-screen-middle) {
+    .content {
+        width: 76%;
+    }
+
+    .navigation {
+        display: block;
+        float: left;
+        width: 24%;
+    }
+}
+
+@media (min-width: $media-screen-large) {
+    .content {
+        width: 61%;
+    }
+
+    .navigation {
+        display: block;
+        float: left;
+        width: 39%;
+    }
+}
+
+

@@ -1,0 +1,845 @@
+<!doctype html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Volcano UI -- Document -- tables</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root  directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/document.css -->
+    <link rel="stylesheet" href="styles/document.css">
+    <!-- endbuild -->
+
+    <link rel="stylesheet" href="styles/volcano.css">
+
+    <!-- build:css styles/doc/tootik.min.css -->
+    <link rel="stylesheet" href="styles/doc/tootik.min.css">
+    <!-- endbuild -->
+
+    <!-- build:css styles/doc/code-color.min.css -->
+    <link rel="stylesheet" href="styles/doc/color-brewer.css">
+    <!-- endbuild -->
+
+</head>
+<body>
+
+<header class="v-header">
+
+
+    <nav class="v-nav hidden-mobile">
+        <div class="logo"></div>
+        <ul class="v-menu">
+            <li><a href="javascript:;">Button</a></li>
+            <li><a href="javascript:;">Forms</a></li>
+            <li><a href="javascript:;">Grid</a></li>
+            <li class="active"><a href="javascript:;">Tables</a></li>
+        </ul>
+    </nav>
+
+
+</header>
+
+<main class="main">
+
+    <div class="content">
+        <section class="button">
+            <h1>表格</h1>
+            <h3>快速创建不同样式的表格</h3>
+
+
+            <!-- 类型 -->
+            <div class="doc-wrap" id="tableBase">
+                <p class="description">基本样式</p>
+
+                <div class="demo-wrap">
+
+                    <span class="title">
+                        为 <code>&lt;table&gt;</code> 标签添加 <code>.table</code> 类可以为其赋予基本的样式
+                    </span>
+
+                    <div class="example">
+
+                        <table class="v-table">
+                            <thead>
+                            <tr>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>User name</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                    <div class="highlight">
+                        <a href="javascript:;" data-clipboard-action="copy" data-clipboard-target="#table-base" data-tootik="复制" class="clipboard-btn">
+                            <img src="images/doc/clippy.svg" width="13" alt="">
+                        </a>
+                        <pre><code id="table-base">&lt;!-- 基本样式 --&gt;
+&lt;table class="v-table"&gt;
+    ...
+&lt;/table&gt;
+</code></pre>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- 紧凑型表格 -->
+            <div class="doc-wrap" id="tableCondensed">
+                <p class="description">紧凑型表格</p>
+
+                <div class="demo-wrap">
+
+                    <span class="title">
+                        通过添加 <code>.table-condensed</code> 类可以让表格更加紧凑
+                    </span>
+
+                    <div class="example">
+
+                        <table class="v-table condensed">
+                            <thead>
+                            <tr>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>User name</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                    <div class="highlight">
+                        <a href="javascript:;" data-clipboard-action="copy" data-clipboard-target="#table-condensed" data-tootik="复制" class="clipboard-btn">
+                            <img src="images/doc/clippy.svg" width="13" alt="">
+                        </a>
+                        <pre><code id="table-condensed">&lt;!-- 紧凑型 --&gt;
+&lt;table class="v-table condensed"&gt;
+    ...
+&lt;/table&gt;
+</code></pre>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- 内容换行 -->
+            <div class="doc-wrap" id="tableFixed">
+                <p class="description">内容换行显示</p>
+
+                <div class="demo-wrap">
+
+                    <span class="title">
+                        添加 <code>.fixed</code> 类可以让表格内容跟随表格宽度，自动换行
+                    </span>
+
+                    <div class="example">
+
+                        <table class="v-table fixed">
+                            <thead>
+                            <tr>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>User name</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Mark</td>
+                                <td>OttoOttoOttoOttoOttoOttoOttoOttoOttoOttoOttoOttoOttoOttoOttoOttoOtto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                    <div class="highlight">
+                        <a href="javascript:;" data-clipboard-action="copy" data-clipboard-target="#table-fixed" data-tootik="复制" class="clipboard-btn">
+                            <img src="images/doc/clippy.svg" width="13" alt="">
+                        </a>
+                        <pre><code id="table-fixed">&lt;!-- 内容换行显示 --&gt;
+&lt;table class="v-table fixed"&gt;
+    ...
+&lt;/table&gt;
+</code></pre>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- 内容单行显示 -->
+            <div class="doc-wrap" id="tableSingle">
+                <p class="description">内容单行显示</p>
+
+                <div class="demo-wrap">
+
+                    <span class="title">
+                        添加 <code>.single</code> 类可以让表格内容超出表格宽度后不换行并显示...
+                    </span>
+
+                    <div class="example">
+
+                        <table class="v-table single">
+                            <thead>
+                            <tr>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>User name</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Mark</td>
+                                <td>OttoOttoOttoOttoOttoOttoOttoOttoOttoOttoOttoOttoOttoOttoOttoOttoOtto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                    <div class="highlight">
+                        <a href="javascript:;" data-clipboard-action="copy" data-clipboard-target="#table-single" data-tootik="复制" class="clipboard-btn">
+                            <img src="images/doc/clippy.svg" width="13" alt="">
+                        </a>
+                        <pre><code id="table-single">&lt;!-- 内容单行显示 --&gt;
+&lt;table class="v-table single"&gt;
+    ...
+&lt;/table&gt;
+</code></pre>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- 条纹状表格 -->
+            <div class="doc-wrap" id="tableStriped">
+                <p class="description">条纹状表格</p>
+
+                <div class="demo-wrap">
+
+                    <span class="title">
+                        添加 <code>.table-striped</code> 类可以给 <code>tbody</code> 之内的每一行增加条纹样式
+                    </span>
+
+                    <div class="example">
+
+                        <table class="v-table fixed striped">
+                            <thead>
+                            <tr>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>User name</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                    <div class="highlight">
+                        <a href="javascript:;" data-clipboard-action="copy" data-clipboard-target="#table-striped" data-tootik="复制" class="clipboard-btn">
+                            <img src="images/doc/clippy.svg" width="13" alt="">
+                        </a>
+                        <pre><code id="table-striped">&lt;!-- 条纹状表格 --&gt;
+&lt;table class="v-table striped"&gt;
+    ...
+&lt;/table&gt;
+</code></pre>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- 边框表格 -->
+            <div class="doc-wrap" id="tableBordered">
+                <p class="description">边框表格</p>
+
+                <div class="demo-wrap">
+
+                    <span class="title">
+                        添加 <code>.bordered</code> 类为表格和其中的每个单元格增加边框
+                    </span>
+
+                    <div class="example">
+
+                        <table class="v-table bordered">
+                            <thead>
+                            <tr>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>User name</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                    <div class="highlight">
+                        <a href="javascript:;" data-clipboard-action="copy" data-clipboard-target="#table-bordered" data-tootik="复制" class="clipboard-btn">
+                            <img src="images/doc/clippy.svg" width="13" alt="">
+                        </a>
+                        <pre><code id="table-bordered">&lt;!-- 边框表格 --&gt;
+&lt;table class="v-table single bordered"&gt;
+    ...
+&lt;/table&gt;
+</code></pre>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- 响应式表格 -->
+            <div class="doc-wrap" id="tableResponsive">
+                <p class="description">响应式表格</p>
+
+                <div class="demo-wrap">
+
+                    <span class="title">
+                        将 <code>.v-table</code> 元素包裹在 <code>.v-table-responsive</code> 元素内，即可创建响应式表格
+                    </span>
+
+                    <div class="example">
+
+                        <div class="v-table-responsive">
+                            <table class="v-table">
+                                <thead>
+                                <tr>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>User name</th>
+                                    <th>User name</th>
+                                    <th>User name</th>
+                                    <th>User name</th>
+                                    <th>User name</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>Mark</td>
+                                    <td>OttoO</td>
+                                    <td>@mdo</td>
+                                    <td>@mdo</td>
+                                    <td>@mdo</td>
+                                    <td>@mdo</td>
+                                    <td>@mdo</td>
+                                </tr>
+                                <tr>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                    <td>@mdo</td>
+                                    <td>@mdo</td>
+                                    <td>@mdo</td>
+                                    <td>@mdo</td>
+                                </tr>
+                                <tr>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                    <td>@mdo</td>
+                                    <td>@mdo</td>
+                                    <td>@mdo</td>
+                                    <td>@mdo</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+
+                    </div>
+
+                    <div class="highlight">
+                        <a href="javascript:;" data-clipboard-action="copy" data-clipboard-target="#table-responsive" data-tootik="复制" class="clipboard-btn">
+                            <img src="images/doc/clippy.svg" width="13" alt="">
+                        </a>
+                        <pre><code id="table-responsive">&lt;!-- 响应式表格 --&gt;
+&lt;div class="v-table-responsive"&gt;
+	&lt;table class="v-table"&gt;
+		...
+	&lt;/table&gt;
+&lt;/div&gt;
+</code></pre>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- 鼠标悬停 -->
+            <div class="doc-wrap" id="tableHover">
+                <p class="description">鼠标悬停</p>
+
+                <div class="demo-wrap">
+
+                    <span class="title">
+                        添加 <code>.hover</code> 类可以让 <code>&lt;tbody&gt;</code> 中的每一行在鼠标悬停时改变背景色
+                    </span>
+
+                    <div class="example">
+
+                        <div class="v-table-responsive">
+                            <table class="v-table hover">
+                                <thead>
+                                <tr>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>User name</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                </tr>
+                                <tr>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                </tr>
+                                <tr>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+
+                    </div>
+
+                    <div class="highlight">
+                        <a href="javascript:;" data-clipboard-action="copy" data-clipboard-target="#table-hover" data-tootik="复制" class="clipboard-btn">
+                            <img src="images/doc/clippy.svg" width="13" alt="">
+                        </a>
+                        <pre><code id="table-hover">&lt;!-- 鼠标悬停 --&gt;
+&lt;table class="v-table hover"&gt;
+    ...
+&lt;/table&gt;
+</code></pre>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- 带复选框的表格-->
+            <div class="doc-wrap" id="tableCheck">
+                <p class="description">带复选框的表格</p>
+
+                <div class="demo-wrap">
+
+                    <span class="title">
+                        使用复选框时请不要删除 <code>&lt;label&gt;</code> 标签
+                    </span>
+
+                    <div class="example">
+
+                            <table class="v-table">
+                                <thead>
+                                <tr>
+                                    <th width="12%">
+                                        <div class="v-check">
+                                            <input type="checkbox" id="cd-checkbox-t1">
+                                            <label for="cd-checkbox-t1"></label>
+                                        </div>
+                                    </th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>User name</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="v-check">
+                                            <input type="checkbox" id="cd-checkbox-t2">
+                                            <label for="cd-checkbox-t2"></label>
+                                        </div>
+                                    </td>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="v-check">
+                                            <input type="checkbox" id="cd-checkbox-t3">
+                                            <label for="cd-checkbox-t3"></label>
+                                        </div>
+                                    </td>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="v-check">
+                                            <input type="checkbox" id="cd-checkbox-t4">
+                                            <label for="cd-checkbox-t4"></label>
+                                        </div>
+                                    </td>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+
+                    </div>
+
+                    <div class="highlight">
+                        <a href="javascript:;" data-clipboard-action="copy" data-clipboard-target="#table-check" data-tootik="复制" class="clipboard-btn">
+                            <img src="images/doc/clippy.svg" width="13" alt="">
+                        </a>
+                        <pre><code id="table-check">&lt;!-- 包含复选框 --&gt;
+&lt;table class="v-table"&gt;
+    &lt;thead&gt;
+    &lt;tr&gt;
+        &lt;th&gt;
+            &lt;div class="v-check"&gt;
+                &lt;input type="checkbox" id="cd-checkbox-t1"&gt;
+                &lt;label for="cd-checkbox-t1"&gt;&lt;/label&gt;
+            &lt;/div&gt;
+        &lt;/th&gt;
+        ...
+    &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+    &lt;tr&gt;
+        &lt;td&gt;
+            &lt;div class="v-check"&gt;
+                &lt;input type="checkbox" id="cd-checkbox-t2"&gt;
+                &lt;label for="cd-checkbox-t2"&gt;&lt;/label&gt;
+            &lt;/div&gt;
+        &lt;/td&gt;
+        ...
+    &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- 其他样式 -->
+            <div class="doc-wrap" id="tableOther">
+                <p class="description">其他样式</p>
+
+                <div class="demo-wrap">
+
+                    <span class="title">
+                        实例
+                    </span>
+
+                    <div class="example">
+
+                        <div class="v-table-responsive">
+                            <table class="v-table fixed">
+                                <thead>
+                                <tr>
+                                    <th width="40">&nbsp;</th>
+                                    <th width="200">User name</th>
+                                    <th width="100">First Name</th>
+                                    <th width="100">Last Name</th>
+                                    <th width="100">State</th>
+                                    <th width="100">Tel</th>
+                                    <th width="100">Set</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <img src="images/doc/avatar-matthew.png" alt="" class="avatar">
+                                    </td>
+                                    <td>
+                                        admin@volcano-ui.com
+                                        <span class="td-describe">Administrator</span>
+                                    </td>
+                                    <td>Otto</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                    <td>15989616666</td>
+                                    <td>
+                                        <a href="javascript:;" class="v-button primary mini">
+                                            <i class="icon-check"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="images/doc/avatar-lena.png" alt="" class="avatar">
+                                    </td>
+                                    <td>
+                                        admin@volcano-ui.com
+                                        <span class="td-describe">Administrator</span>
+                                    </td>
+                                    <td>Otto</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                    <td>15989616666</td>
+                                    <td>
+                                        <a href="javascript:;" class="v-button primary mini">
+                                            <i class="icon-check"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                    <div class="highlight">
+                        <a href="javascript:;" data-clipboard-action="copy" data-clipboard-target="#table-other" data-tootik="复制" class="clipboard-btn">
+                            <img src="images/doc/clippy.svg" width="13" alt="">
+                        </a>
+                        <pre><code id="table-other">&lt;!-- 其他样式 --&gt;
+&lt;div class="v-table-responsive"&gt;
+    &lt;table class="v-table fixed"&gt;
+        &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th width="40"&gt;&nbsp;&lt;/th&gt;
+            &lt;th width="200"&gt;User name&lt;/th&gt;
+            &lt;th width="100"&gt;First Name&lt;/th&gt;
+            &lt;th width="100"&gt;Last Name&lt;/th&gt;
+            &lt;th width="100"&gt;State&lt;/th&gt;
+            &lt;th width="100"&gt;Tel&lt;/th&gt;
+            &lt;th width="100"&gt;Set&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;img src="images/doc/avatar-matthew.png" alt="" class="avatar"&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+                admin@volcano-ui.com
+                &lt;span class="td-describe"&gt;Administrator&lt;/span&gt;
+            &lt;/td&gt;
+            &lt;td&gt;Otto&lt;/td&gt;
+            &lt;td&gt;Otto&lt;/td&gt;
+            &lt;td&gt;@mdo&lt;/td&gt;
+            &lt;td&gt;15989616666&lt;/td&gt;
+            &lt;td&gt;
+                &lt;a href="javascript:;" class="v-button primary mini"&gt;
+                    &lt;i class="icon-check"&gt;&lt;/i&gt;
+                &lt;/a&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;img src="images/doc/avatar-lena.png" alt="" class="avatar"&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+                admin@volcano-ui.com
+                &lt;span class="td-describe"&gt;Administrator&lt;/span&gt;
+            &lt;/td&gt;
+            &lt;td&gt;Otto&lt;/td&gt;
+            &lt;td&gt;Otto&lt;/td&gt;
+            &lt;td&gt;@mdo&lt;/td&gt;
+            &lt;td&gt;15989616666&lt;/td&gt;
+            &lt;td&gt;
+                &lt;a href="javascript:;" class="v-button primary mini"&gt;
+                    &lt;i class="icon-check"&gt;&lt;/i&gt;
+                &lt;/a&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/div&gt;
+</code></pre>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+
+        </section>
+
+    </div>
+
+    <div class="navigation">
+        <div class="menu-wrap">
+            <span class="ele-name">Table</span>
+            <ul id="nav">
+                <li class="current"><a href="#tableBase">基本样式</a></li>
+                <li><a href="#tableCondensed">紧凑型表格</a></li>
+                <li><a href="#tableFixed">内容换行显示</a></li>
+                <li><a href="#tableSingle">内容单行显示</a></li>
+                <li><a href="#tableStriped">条纹状表格</a></li>
+                <li><a href="#tableBordered">边框表格</a></li>
+                <li><a href="#tableResponsive">响应式表格</a></li>
+                <li><a href="#tableHover">鼠标悬停</a></li>
+                <li><a href="#tableCheck">带复选框的表格</a></li>
+                <li><a href="#tableOther">其他样式</a></li>
+            </ul>
+        </div>
+    </div>
+
+</main>
+
+<footer>
+    <div class="footer-wrap">
+        footer
+    </div>
+</footer>
+
+
+<!-- build:js scripts/jquery-3.1.0.min.js -->
+<script src="scripts/jquery-3.1.0.min.js"></script>
+<!-- endbuild -->
+
+<!-- build:js scripts/doc/jquery.nav.js -->
+<script src="scripts/doc/jquery.nav.js"></script>
+<!-- endbuild -->
+
+<!-- build:js scripts/doc/highlight.min.js -->
+<script src="scripts/doc/highlight.min.js"></script>
+<!-- endbuild -->
+
+<!-- build:js scripts/doc/clipboard.min.js -->
+<script src="scripts/doc/clipboard.min.js"></script>
+<!-- endbuild -->
+
+<!-- build:js scripts/doc/document.js -->
+<script src="scripts/doc/document.js"></script>
+<!-- endbuild -->
+
+
+
+</body>
+</html>

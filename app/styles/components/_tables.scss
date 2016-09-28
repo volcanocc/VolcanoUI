@@ -1,0 +1,118 @@
+/* Table
+   ========================================================================== */
+.v-table {
+    width: 100%;
+    background: #FFF;
+    box-shadow: none;
+    border-radius: .28571429rem;
+    text-align: left;
+    color: $table-color;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: none;
+    margin-bottom: $table-margin;
+
+    td {
+        border: none;
+        border-bottom: 1px solid $table-border-color;
+        padding: $table-td-padding;
+    }
+
+    thead {
+        th, td {
+            color: $table-thead-color;
+            background: $table-thead-background;
+            padding: $table-th-padding;
+            border: none;
+            border-bottom: 1px solid $table-border-color;
+            line-height: 1.2;
+            font-weight: bold;
+        }
+    }
+
+    //Condensed table
+    &.condensed {
+        th, td {
+            padding: $table-td-padding-condensed;
+        }
+    }
+
+    //Fixed table
+    &.fixed {
+        table-layout: fixed;
+
+        th, td {
+            word-break: break-all;
+            word-wrap: break-word;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+    }
+
+    //Ellipsis table
+    &.single {
+        table-layout: fixed;
+
+        th, td {
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+    //Striped table
+    &.striped {
+
+        tbody > tr:nth-of-type(even) {
+            background-color: $table-striped-color;
+        }
+    }
+
+    //Bordered table
+    &.bordered {
+        border: 1px solid $table-bordered-color;
+
+        thead tr th, tbody tr td, tfoot tr td {
+            border: 1px solid $table-bordered-color;
+        }
+    }
+
+    //Hover table
+    &.hover tbody tr:hover {
+        background-color: $table-striped-color;
+    }
+
+    //Table checkbox
+    .v-check {
+        margin: $table-checkbox-margin;
+        vertical-align: baseline;
+    }
+
+    .td-describe {
+        display: block;
+        font-size: 1.2rem;
+        color: #a9a9a9;
+    }
+
+    .avatar {
+        display: inline-block;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+    }
+
+
+
+}
+
+//Responsive table
+.v-table-responsive {
+    min-height: .01%;
+    overflow-x: auto;
+}
+
+@media (max-width: $media-screen-small) {
+    .v-table-responsive > .v-table > tbody > tr > td, .v-table-responsive > .v-table > tbody > tr > th, .v-table-responsive > .v-table > tfoot > tr > td, .v-table-responsive > .v-table > tfoot > tr > th, .v-table-responsive > .v-table > thead > tr > td, .v-table-responsive > .v-table > thead > tr > th {
+        white-space: nowrap;
+    }
+}

@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Volcano UI -- Grids</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root  directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/volcano.css">
+    <!-- endbuild -->
+
+    <style type="text/css">
+        [class*='v-grid-'] {
+            background-color: #ccc;
+            border-right: 1px solid #00a0e9;
+        }
+
+        [class*='v-grid-']:last-child {
+            border: none;
+        }
+    </style>
+
+</head>
+<body>
+
+
+<div class="container">
+
+    <div class="v-row" style="margin-bottom: 20px">
+        <div class="v-grid-1">grid1</div>
+        <div class="v-grid-1">grid1</div>
+        <div class="v-grid-1">grid1</div>
+        <div class="v-grid-1">grid1</div>
+        <div class="v-grid-1">grid1</div>
+        <div class="v-grid-1">grid1</div>
+        <div class="v-grid-6">
+
+            <div class="v-row">
+                <div class="v-grid-6">grid6</div>
+                <div class="v-grid-6">
+                    <div class="v-row">
+                        <div class="v-grid-3 v-grid-l-1 v-grid-mobile-6">grid6grid6grid6grid6agrid6grid6grid6grid6</div>
+                        <div class="v-grid-9 v-grid-mobile-6">grid6grid6grid6grid6grid6grid6grid6grid6</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="v-grid-1">grid1</div>
+        <div class="v-grid-1">grid1</div>
+        <div class="v-grid-1">grid1</div>
+        <div class="v-grid-1">grid1</div>
+        <div class="v-grid-1">grid1</div>
+    </div>
+
+    <div class="v-row" style="margin-bottom: 20px">
+        <div class="v-grid-2 hidden-mobile">hidden-mobile</div>
+        <div class="v-grid-2 hidden-s">hidden-s</div>
+        <div class="v-grid-2 hidden-m">hidden-m</div>
+        <div class="v-grid-2 hidden-l">hidden-l</div>
+    </div>
+
+    <div class="v-row" style="margin-bottom: 20px">
+        <div class="v-grid-2 visible-mobile">visible-mobile</div>
+        <div class="v-grid-2 visible-s">visible-s</div>
+        <div class="v-grid-2 visible-m">visible-m</div>
+        <div class="v-grid-2 visible-l">visible-l</div>
+    </div>
+
+    <div class="v-row" style="margin-bottom: 20px">
+        <div class="v-grid-2 visible-mobile-inline">visible-mobile-inline</div>
+        <div class="v-grid-2 visible-s-inline">visible-s-inline</div>
+        <div class="v-grid-2 visible-m-inline">visible-m-inline</div>
+        <div class="v-grid-2 visible-l-inline">visible-l-inline</div>
+    </div>
+
+
+</div>
+
+
+
+
+<!-- build:js scripts/vendor.js -->
+<!-- bower:js -->
+<!-- endbower -->
+<!-- endbuild -->
+
+
+<!-- build:js scripts/main.js -->
+<script src="scripts/main.js"></script>
+<!-- endbuild -->
+
+</body>
+</html>

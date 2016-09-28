@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Volcano UI -- Document -- grid</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root  directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/document.css -->
+    <link rel="stylesheet" href="styles/document.css">
+    <!-- endbuild -->
+
+    <link rel="stylesheet" href="styles/volcano.css">
+
+    <!-- build:css styles/doc/tootik.min.css -->
+    <link rel="stylesheet" href="styles/doc/tootik.min.css">
+    <!-- endbuild -->
+
+    <!-- build:css styles/doc/code-color.min.css -->
+    <link rel="stylesheet" href="styles/doc/color-brewer.css">
+    <!-- endbuild -->
+
+</head>
+<body>
+
+<header class="v-header">
+
+
+    <nav class="v-nav hidden-mobile">
+        <div class="logo"></div>
+        <ul class="v-menu">
+            <li><a href="javascript:;">Button</a></li>
+            <li><a href="javascript:;">Forms</a></li>
+            <li class="active"><a href="javascript:;">Grid</a></li>
+            <li><a href="javascript:;">Table</a></li>
+        </ul>
+    </nav>
+
+
+</header>
+
+<main class="main">
+
+    <div class="content">
+        <section class="grid">
+            <h1>栅格系统</h1>
+            <h3>提供一套响应式、移动设备优先的流式栅格系统，随着屏幕或视口尺寸的改变而改变，最多12列</h3>
+
+            <!-- 类型 -->
+            <div class="doc-wrap" id="buttonType">
+                <p class="description">在栅格系统中，采用媒体查询（media query）来创建关键的分界点阈值</p>
+
+                <div class="demo-wrap">
+
+                    <span class="title">
+                        默认栅格分移动和PC端，在手机端以堆叠形式排列，在PC端以以水平形式排列
+                    </span>
+
+                    <div class="example">
+
+                        <div class="v-row">
+                            <div class="v-grid-1">.v-grid-1</div>
+                            <div class="v-grid-1">.v-grid-1</div>
+                            <div class="v-grid-1">.v-grid-1</div>
+                            <div class="v-grid-1">.v-grid-1</div>
+                            <div class="v-grid-1">.v-grid-1</div>
+                            <div class="v-grid-1">.v-grid-1</div>
+                            <div class="v-grid-1">.v-grid-1</div>
+                            <div class="v-grid-1">.v-grid-1</div>
+                            <div class="v-grid-1">.v-grid-1</div>
+                            <div class="v-grid-1">.v-grid-1</div>
+                            <div class="v-grid-1">.v-grid-1</div>
+                            <div class="v-grid-1">.v-grid-1</div>
+                        </div>
+                        <div class="v-row">
+                            <div class="v-grid-6">.v-grid-6</div>
+                            <div class="v-grid-6">.v-grid-6</div>
+                        </div>
+
+
+
+
+                    </div>
+
+                    <div class="highlight">
+                        <a href="javascript:;" data-clipboard-action="copy" data-clipboard-target="#button-type" data-tootik="复制" class="clipboard-btn">
+                            <img src="images/doc/clippy.svg" width="13" alt="">
+                        </a>
+                        <pre><code id="button-type">&lt;!-- 可使用的标签 --&gt;
+&lt;a class="v-button" href="#"&gt;Link&lt;/a&gt;
+&lt;button class="v-button" type="submit"&gt;Button&lt;/button&gt;
+&lt;input class="v-button" type="button" value="Input"&gt;
+&lt;input class="v-button" type="submit" value="Submit"&gt;
+</code></pre>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+        </section>
+
+    </div>
+
+    <div class="navigation">
+        <div class="menu-wrap">
+            <span class="ele-name">Button</span>
+            <ul id="nav">
+                <li class="current"><a href="#buttonType">可作为按钮使用的标签或元素</a></li>
+                <li><a href="#buttonStyle">预定义样式</a></li>
+                <li><a href="#buttonSize">尺寸</a></li>
+                <li><a href="#buttonDisabled">禁用状态</a></li>
+                <li><a href="#buttonGroup">按钮组</a></li>
+                <li><a href="#buttonLabel">标签样式</a></li>
+                <li><a href="#buttonIcon">图标按钮</a></li>
+                <li><a href="#buttonBlock">块级按钮</a></li>
+            </ul>
+        </div>
+    </div>
+
+</main>
+
+<footer>
+    <div class="footer-wrap">
+        footer
+    </div>
+</footer>
+
+
+<!-- build:js scripts/jquery-3.1.0.min.js -->
+<script src="scripts/jquery-3.1.0.min.js"></script>
+<!-- endbuild -->
+
+<!-- build:js scripts/doc/jquery.nav.js -->
+<script src="scripts/doc/jquery.nav.js"></script>
+<!-- endbuild -->
+
+<!-- build:js scripts/doc/highlight.min.js -->
+<script src="scripts/doc/highlight.min.js"></script>
+<!-- endbuild -->
+
+<!-- build:js scripts/doc/clipboard.min.js -->
+<script src="scripts/doc/clipboard.min.js"></script>
+<!-- endbuild -->
+
+<!-- build:js scripts/doc/document.js -->
+<script src="scripts/doc/document.js"></script>
+<!-- endbuild -->
+
+
+
+</body>
+</html>

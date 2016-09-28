@@ -1,0 +1,1106 @@
+<!doctype html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Volcano UI -- Document -- buttons</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root  directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/document.css -->
+    <link rel="stylesheet" href="styles/document.css">
+    <!-- endbuild -->
+
+    <link rel="stylesheet" href="styles/volcano.css">
+
+    <!-- build:css styles/doc/tootik.min.css -->
+    <link rel="stylesheet" href="styles/doc/tootik.min.css">
+    <!-- endbuild -->
+
+    <!-- build:css styles/doc/code-color.min.css -->
+    <link rel="stylesheet" href="styles/doc/color-brewer.css">
+    <!-- endbuild -->
+
+</head>
+<body>
+
+<header class="v-header">
+
+
+    <nav class="v-nav hidden-mobile">
+        <div class="logo"></div>
+        <ul class="v-menu">
+            <li><a href="javascript:;">Button</a></li>
+            <li class="active"><a href="javascript:;">Forms</a></li>
+            <li><a href="javascript:;">Grid</a></li>
+            <li><a href="javascript:;">Table</a></li>
+        </ul>
+    </nav>
+
+
+</header>
+
+<main class="main">
+
+    <div class="content">
+        <section class="button">
+            <h1>表单元素</h1>
+            <h3>表单中所使用到的一些元素组件</h3>
+
+            <!-- 表单基本样式 -->
+            <div class="doc-wrap" id="formExample">
+                <p class="description">基本样式</p>
+
+                <div class="demo-wrap">
+
+                    <span class="title">基本样式:支持提示和校验，使用时请注意层级结构</span>
+
+                    <div class="example clearfix">
+
+                        <form action="#">
+                            <div class="v-input-group">
+                                <div class="v-input-control">
+                                    <label for="username1">User Name：</label>
+                                    <input placeholder="Placeholder" class="v-input" id="username1" type="text" required/>
+                                </div>
+                            </div>
+                            <div class="v-input-group">
+                                <div class="v-input-control">
+                                    <label for="firstname2">First Name</label>
+                                    <input placeholder="Placeholder" class="v-input" id="firstname2" type="text"/>
+                                </div>
+                            </div>
+                            <div class="v-input-group">
+                                <div class="v-input-control">
+                                    <label for="email1">Email：</label>
+                                    <input placeholder="Placeholder" class="v-input" id="email1" type="email" required/>
+                                </div>
+                                <p class="tips">Please enter your email address</p>
+                            </div>
+                            <div class="v-select-group">
+                                <div class="v-select-control">
+                                    <label>Address</label>
+                                    <select name="" id="" class="v-select">
+                                        <option>New York</option>
+                                        <option>Paris</option>
+                                        <option>Melbourne</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="v-row">
+                                <div class="v-grid-12">
+                                    <div class="v-check label-width">
+                                        <input type="checkbox" id="cd-checkbox-1">
+                                        <label for="cd-checkbox-1">Check me</label>
+                                    </div>
+                                    <div class="v-check label-width">
+                                        <input type="checkbox" id="cd-checkbox-2">
+                                        <label for="cd-checkbox-2">Check me</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="v-button primary label-icon">
+                                <i class="icon-circle-check"></i>
+                                submit
+                            </button>
+                        </form>
+
+                    </div>
+
+                    <div class="highlight hidden-mobile">
+                        <a href="javascript:;" data-clipboard-action="copy" data-clipboard-target="#form-base"
+                           data-tootik="复制" class="clipboard-btn">
+                            <img src="images/doc/clippy.svg" width="13" alt="">
+                        </a>
+                        <pre><code id="form-base">&lt;!-- 基本表单实例 --&gt;
+&lt;form action="#"&gt;
+    &lt;div class="v-input-group"&gt;
+        &lt;div class="v-input-control"&gt;
+            &lt;label for="username"&gt;User Name：&lt;/label&gt;
+            &lt;input placeholder="Placeholder" class="v-input" id="username" type="text" required/&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="v-input-group"&gt;
+        &lt;div class="v-input-control"&gt;
+            &lt;label for="firstname"&gt;First Name&lt;/label&gt;
+            &lt;input placeholder="Placeholder" class="v-input" id="firstname" type="text"/&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="v-input-group"&gt;
+        &lt;div class="v-input-control"&gt;
+            &lt;label for="email"&gt;Email：&lt;/label&gt;
+            &lt;input placeholder="Placeholder" class="v-input" id="email" type="email" required/&gt;
+        &lt;/div&gt;
+        &lt;p class="tips"&gt;Please enter your email address&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="v-select-group"&gt;
+        &lt;div class="v-select-control"&gt;
+            &lt;label&gt;Address&lt;/label&gt;
+            &lt;select name="" id="" class="v-select"&gt;
+                &lt;option&gt;New York&lt;/option&gt;
+                &lt;option&gt;Paris&lt;/option&gt;
+                &lt;option&gt;Melbourne&lt;/option&gt;
+            &lt;/select&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="v-row"&gt;
+        &lt;div class="v-grid-12"&gt;
+            &lt;div class="v-check label-width"&gt;
+                &lt;input type="checkbox" id="cd-checkbox-1"&gt;
+                &lt;label for="cd-checkbox-1"&gt;Check me&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class="v-check label-width"&gt;
+                &lt;input type="checkbox" id="cd-checkbox-2"&gt;
+                &lt;label for="cd-checkbox-2"&gt;Check me&lt;/label&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;button type="submit" class="v-button primary label-icon"&gt;
+        &lt;i class="icon-circle-check"&gt;&lt;/i&gt;
+        submit
+    &lt;/button&gt;
+&lt;/form&gt;
+</code></pre>
+                    </div>
+
+                </div>
+            </div>
+            <!-- 表单基本样式end -->
+
+            <!-- 扩展样式 -->
+            <div class="doc-wrap" id="formExtend">
+                <p class="description">扩展样式</p>
+
+                <div class="demo-wrap">
+
+                    <span class="title">预置圆角外观样式,使用时添加 <code>.radius</code> 类</span>
+
+                    <div class="example clearfix">
+
+                        <!-- 输入框 -->
+                        <div class="v-input-group">
+                            <div class="v-input-control radius">
+                                <label for="input1">Input：</label>
+                                <input placeholder="Placeholder" class="v-input" id="input1" type="text"/>
+                            </div>
+                        </div>
+
+                        <!-- 下拉列表 -->
+                        <div class="v-select-group">
+                            <div class="v-select-control radius">
+                                <label>Select：</label>
+                                <select name="" id="" class="v-select">
+                                    <option>New York</option>
+                                    <option>Paris</option>
+                                    <option>Melbourne</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="highlight hidden-mobile">
+                        <a href="javascript:;" data-clipboard-action="copy" data-clipboard-target="#form-base"
+                           data-tootik="复制" class="clipboard-btn">
+                            <img src="images/doc/clippy.svg" width="13" alt="">
+                        </a>
+                            <pre><code id="form-base">&lt;!-- 输入框 --&gt;
+&lt;div class="v-input-group"&gt;
+    &lt;div class="v-input-control radius"&gt;
+        &lt;label for="input"&gt;Input：&lt;/label&gt;
+        &lt;input placeholder="Placeholder" class="v-input" id="input" type="text"/&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- 下拉列表 --&gt;
+&lt;div class="v-select-group"&gt;
+    &lt;div class="v-select-control radius"&gt;
+        &lt;label&gt;Select：&lt;/label&gt;
+        &lt;select name="" id="" class="v-select"&gt;
+            &lt;option&gt;New York&lt;/option&gt;
+            &lt;option&gt;Paris&lt;/option&gt;
+            &lt;option&gt;Melbourne&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+    </code></pre>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- 扩展样式end -->
+
+            <!-- 尺寸 -->
+            <div class="doc-wrap" id="formSize">
+                <p class="description">尺寸</p>
+
+                <div class="demo-wrap">
+
+                    <span class="title">预置3种尺寸，添加 <code>.large</code> <code>.small</code> 类改变按钮尺寸</span>
+
+                    <div class="example clearfix">
+
+                        <form action="">
+
+                            <div class="v-row">
+                                <div class="v-grid-12">
+                                    <div class="v-input-group">
+                                        <div class="v-input-control large">
+                                            <label for="large">Large：</label>
+                                            <input placeholder="Placeholder" class="v-input" id="large" type="text"/>
+                                        </div>
+                                    </div>
+                                    <div class="v-input-group">
+                                        <div class="v-input-control">
+                                            <label for="default">Default：</label>
+                                            <input placeholder="Placeholder" class="v-input" id="default" type="text"/>
+                                        </div>
+                                    </div>
+                                    <div class="v-input-group">
+                                        <div class="v-input-control small">
+                                            <label for="small">Small：</label>
+                                            <input placeholder="Placeholder" class="v-input" id="small" type="text"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="v-row">
+                                <div class="v-grid-12">
+                                    <div class="v-select-group">
+                                        <div class="v-select-control large">
+                                            <label>Large：</label>
+                                            <select name="" id="" class="v-select">
+                                                <option>New York</option>
+                                                <option>Paris</option>
+                                                <option>Melbourne</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="v-select-group">
+                                        <div class="v-select-control">
+                                            <label>Default：</label>
+                                            <select name="" id="" class="v-select">
+                                                <option>New York</option>
+                                                <option>Paris</option>
+                                                <option>Melbourne</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="v-select-group">
+                                        <div class="v-select-control small">
+                                            <label>Small：</label>
+                                            <select name="" id="" class="v-select">
+                                                <option>New York</option>
+                                                <option>Paris</option>
+                                                <option>Melbourne</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                    <div class="highlight hidden-mobile">
+                        <a href="javascript:;" data-clipboard-action="copy" data-clipboard-target="#form-base"
+                           data-tootik="复制" class="clipboard-btn">
+                            <img src="images/doc/clippy.svg" width="13" alt="">
+                        </a>
+                            <pre><code id="form-base">&lt;!-- 输入框 --&gt;
+&lt;div class="v-input-group"&gt;
+    &lt;div class="v-input-control large"&gt;
+        &lt;label for="input"&gt;Large：&lt;/label&gt;
+        &lt;input placeholder="Placeholder" class="v-input" id="input" type="text"/&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- 下拉列表 --&gt;
+&lt;div class="v-select-group"&gt;
+    &lt;div class="v-select-control large"&gt;
+        &lt;label&gt;Large：&lt;/label&gt;
+        &lt;select name="" id="" class="v-select"&gt;
+            &lt;option&gt;New York&lt;/option&gt;
+            &lt;option&gt;Paris&lt;/option&gt;
+            &lt;option&gt;Melbourne&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+    </code></pre>
+                    </div>
+
+                </div>
+
+
+            </div>
+            <!-- 尺寸end -->
+
+            <!-- 必填项 -->
+            <div class="doc-wrap" id="formRequired">
+                <p class="description">必填项</p>
+
+                <div class="demo-wrap">
+
+                    <span class="title">为输入框设置 <code>required</code> 属性可以标注为必填项</span>
+
+                    <div class="example clearfix">
+
+                        <div class="v-input-group">
+                            <div class="v-input-control">
+                                <label for="required">Input required：</label>
+                                <input placeholder="Placeholder" class="v-input" id="required" type="text" required>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="highlight hidden-mobile">
+                        <a href="javascript:;" data-clipboard-action="copy" data-clipboard-target="#form-base"
+                           data-tootik="复制" class="clipboard-btn">
+                            <img src="images/doc/clippy.svg" width="13" alt="">
+                        </a>
+                        <pre><code id="form-base">&lt;!-- 必填项 --&gt;
+&lt;div class="v-input-group"&gt;
+    &lt;div class="v-input-control"&gt;
+        &lt;label for="input"&gt;Input required：&lt;/label&gt;
+        &lt;input placeholder="Placeholder" class="v-input" id="input" type="text" required&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+                    </div>
+
+                </div>
+            </div>
+            <!-- 必填项end -->
+
+            <!-- 禁用状态 -->
+            <div class="doc-wrap" id="formDdisabled">
+                <p class="description">禁用状态</p>
+
+                <div class="demo-wrap">
+
+                    <span class="title">为输入框和下拉列表设置 <code>disabled</code> 属性可以禁止用户修改内容</span>
+
+                    <div class="example clearfix">
+
+                        <div class="v-input-group">
+                            <div class="v-input-control">
+                                <label for="disabled">Input disabled：</label>
+                                <input placeholder="Placeholder" class="v-input" value="disabled" id="disabled" type="text" disabled>
+                            </div>
+                        </div>
+
+                        <div class="v-select-group">
+                            <div class="v-select-control">
+                                <label>Select disabled：</label>
+                                <select name="" id="" class="v-select" disabled>
+                                    <option>New York</option>
+                                    <option>Paris</option>
+                                    <option>Melbourne</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="highlight hidden-mobile">
+                        <a href="javascript:;" data-clipboard-action="copy" data-clipboard-target="#form-base"
+                           data-tootik="复制" class="clipboard-btn">
+                            <img src="images/doc/clippy.svg" width="13" alt="">
+                        </a>
+                        <pre><code id="form-base">&lt;!-- 禁用的输入框 --&gt;
+&lt;div class="v-input-group"&gt;
+    &lt;div class="v-input-control"&gt;
+        &lt;label for="input"&gt;Input disabled：&lt;/label&gt;
+        &lt;input placeholder="Placeholder" class="v-input" value="disabled" id="input" type="text" disabled&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- 禁用的下拉列表 --&gt;
+&lt;div class="v-select-group"&gt;
+    &lt;div class="v-select-control"&gt;
+        &lt;label&gt;Select disabled：&lt;/label&gt;
+        &lt;select name="" id="" class="v-select" disabled&gt;
+            &lt;option&gt;New York&lt;/option&gt;
+            &lt;option&gt;Paris&lt;/option&gt;
+            &lt;option&gt;Melbourne&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+                    </div>
+
+                </div>
+            </div>
+            <!-- 禁用状态end -->
+
+            <!-- 内联样式 -->
+            <div class="doc-wrap" id="formInline">
+                <p class="description">内联样式</p>
+
+                <div class="demo-wrap">
+
+                    <span class="title">
+                        为元素父级添加 <code>.inline</code> 类可使其内容左对齐并且表现为 inline-block 级别的控件.视口（viewport）小的话就会使表单折叠
+                    </span>
+
+                    <div class="example">
+
+                        <form action="#">
+                            <div class="v-input-control inline">
+                                <label for="username4">User Name：</label>
+                                <input placeholder="Placeholder" class="v-input" id="username4" type="text" required/>
+                            </div>
+                            <div class="v-select-control inline">
+                                <label class="text-right">Sex：</label>
+                                <select name="" id="" class="v-select">
+                                    <option>Boy</option>
+                                    <option>Girl</option>
+                                </select>
+                            </div>
+
+                            <button type="submit" class="v-button primary">
+                                <i class="icon-search"></i>
+                            </button>
+                        </form>
+
+                    </div>
+
+                </div>
+
+                <div class="demo-wrap">
+
+                    <span class="title">
+                        添加 <code>.label-width</code> 类可使其标题 <code>label</code> 固定86px宽度，为 <code>lable</code> 元素添加 <code>.text-left</code> <code>.text-center</code> <code>.text-right</code> 类可以改变文字对齐方式
+                    </span>
+
+                    <div class="example">
+
+                        <form action="#">
+                            <div class="v-input-control inline label-width">
+                                <label for="username5" class="text-right">User Name：</label>
+                                <input placeholder="Placeholder" class="v-input" id="username5" type="text" required/>
+                            </div>
+
+                            <div class="v-check">
+                                <input type="checkbox" id="cd-checkbox-remember">
+                                <label for="cd-checkbox-remember">Remember me</label>
+                            </div>
+
+                            <button type="submit" class="v-button primary">
+                                Sign in
+                            </button>
+                        </form>
+
+                    </div>
+
+                    <div class="highlight hidden-mobile">
+                        <a href="javascript:;" data-clipboard-action="copy" data-clipboard-target="#button-style"
+                           data-tootik="复制" class="clipboard-btn">
+                            <img src="images/doc/clippy.svg" width="13" alt="">
+                        </a>
+                        <pre><code id="button-style">&lt;!-- 内联样式 --&gt;
+&lt;form action="#"&gt;
+    &lt;div class="v-input-control inline"&gt;
+        &lt;label for="input"&gt;User Name：&lt;/label&gt;
+        &lt;input placeholder="Placeholder" class="v-input" id="input" type="text" required/&gt;
+    &lt;/div&gt;
+    &lt;div class="v-select-control inline"&gt;
+        &lt;label&gt;Sex：&lt;/label&gt;
+        &lt;select name="" id="" class="v-select"&gt;
+            &lt;option&gt;Boy&lt;/option&gt;
+            &lt;option&gt;Girl&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/div&gt;
+
+    &lt;button type="submit" class="v-button primary"&gt;
+        &lt;i class="icon-search"&gt;&lt;/i&gt;
+    &lt;/button&gt;
+&lt;/form&gt;
+</code></pre>
+                    </div>
+                </div>
+
+                <div class="demo-wrap">
+
+                    <span class="title">
+                        水平排列表单.添加 <code>.horizontal</code>类， 支持响应式 <code>需要配合栅格系统使用</code> ，更改视口（viewport）大小可以预览效果
+                    </span>
+
+                    <div class="example">
+
+                        <form action="#">
+                            <div class="v-input-group v-row">
+                                <div class="v-input-control horizontal">
+                                    <label for="email3" class="v-grid-3">Email：</label>
+                                    <div class="v-grid-9">
+                                        <input placeholder="Placeholder" class="v-input" id="email3" type="email" required=""/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="v-input-group v-row">
+                                <div class="v-input-control horizontal error">
+                                    <label for="password" class="v-grid-3">Password：</label>
+                                    <div class="v-grid-9">
+                                        <input placeholder="Placeholder" class="v-input" id="password" type="password" required=""/>
+                                        <span class="warning error">Input error </span>
+                                    </div>
+                                </div>
+                                <p class="tips v-grid-9 pull-right">Please enter 6-8 numbers</p>
+                            </div>
+                        </form>
+
+                    </div>
+
+                    <div class="highlight hidden-mobile">
+                        <a href="javascritp:;" data-clipboard-action="copy" data-clipboard-target="#button-style"
+                           data-tootik="复制" class="clipboard-btn">
+                            <img src="images/doc/clippy.svg" width="13" alt="">
+                        </a>
+                        <pre><code id="button-style">&lt;!-- 水平排列表单 --&gt;
+&lt;form action="#"&gt;
+    &lt;div class="v-input-group v-row"&gt;
+        &lt;div class="v-input-control horizontal"&gt;
+            &lt;label for="email" class="v-grid-3"&gt;Email：&lt;/label&gt;
+            &lt;div class="v-grid-9"&gt;
+                &lt;input placeholder="Placeholder" class="v-input" id="email" type="email"/&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="v-input-group v-row"&gt;
+        &lt;div class="v-input-control horizontal"&gt;
+            &lt;label for="password" class="v-grid-3"&gt;Password：&lt;/label&gt;
+            &lt;div class="v-grid-9"&gt;
+                &lt;input placeholder="Placeholder" class="v-input" id="password" type="password"/&gt;
+                &lt;span class="warning error"&gt;Input error &lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;p class="tips v-grid-9 pull-right"&gt;Please enter 6-8 numbers&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
+
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <!-- 内联样式end -->
+
+            <!-- 上传文件 -->
+            <div class="doc-wrap" id="formUpload">
+                <p class="description">上传文件</p>
+
+                <div class="demo-wrap">
+
+                    <span class="title">如需要显示文件路径，请使用 <code>javascript</code> 操作</span>
+
+                    <div class="example clearfix">
+
+                        <div class="v-input-group">
+                            <div class="v-input-control inline">
+                                <label>Input file：</label>
+                                <button type="button" class="v-input-file v-button primary">
+                                    上传文件
+                                    <input type="file">
+                                </button>
+                                <span class="file-path">volcano-ui.png</span>
+                            </div>
+                        </div>
+
+                        <div class="v-input-group">
+                            <div class="v-input-control">
+                                <label>Input file：</label>
+                                <button type="button" class="v-input-file v-button primary">
+                                    上传文件
+                                    <input type="file">
+                                </button>
+                                <span class="file-path">volcano-ui.png</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="highlight hidden-mobile">
+                        <a href="javascript:;" data-clipboard-action="copy" data-clipboard-target="#form-base"
+                           data-tootik="复制" class="clipboard-btn">
+                            <img src="images/doc/clippy.svg" width="13" alt="">
+                        </a>
+                        <pre><code id="form-base">&lt;!-- 内联样式 --&gt;
+&lt;div class="v-input-group"&gt;
+    &lt;div class="v-input-control inline"&gt;
+        &lt;label&gt;Input file：&lt;/label&gt;
+        &lt;button type="button" class="v-input-file v-button primary"&gt;
+            上传文件
+            &lt;input type="file"&gt;
+        &lt;/button&gt;
+        &lt;span class="file-path"&gt;volcano-ui.png&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- 块级样式 --&gt;
+&lt;div class="v-input-group"&gt;
+    &lt;div class="v-input-control"&gt;
+        &lt;label&gt;Input file：&lt;/label&gt;
+        &lt;button type="button" class="v-input-file v-button primary"&gt;
+            上传文件
+            &lt;input type="file"&gt;
+        &lt;/button&gt;
+        &lt;span class="file-path"&gt;volcano-ui.png&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+                    </div>
+
+                </div>
+            </div>
+            <!-- 上传文件end -->
+
+            <!-- 文本域 -->
+            <div class="doc-wrap" id="formTextarea">
+                <p class="description">文本域</p>
+
+                <div class="demo-wrap">
+
+                    <span class="title">实例</span>
+
+                    <div class="example clearfix">
+
+                        <textarea class="v-textarea"></textarea>
+
+                    </div>
+
+                    <div class="highlight hidden-mobile">
+                        <a href="javascript:;" data-clipboard-action="copy" data-clipboard-target="#form-base"
+                           data-tootik="复制" class="clipboard-btn">
+                            <img src="images/doc/clippy.svg" width="13" alt="">
+                        </a>
+                        <pre><code id="form-base">&lt;!-- 文本域 --&gt;
+&lt;textarea class="v-textarea"&gt;&lt;/textarea&gt;
+</code></pre>
+                    </div>
+
+                </div>
+            </div>
+            <!-- 文本域end -->
+
+            <!-- 多选&单选 -->
+            <div class="doc-wrap" id="formCheckRadio">
+                <p class="description">多选和单选框</p>
+
+                <div class="demo-wrap">
+
+                    <span class="title">元素父级添加 <code>.label-width</code> 类可以设置标题最小宽度(min-width) 86px</span>
+
+                    <div class="example clearfix">
+
+                        <div class="v-row">
+                            <div class="v-check label-width">
+                                <input type="checkbox" id="cd-checkbox-4">
+                                <label for="cd-checkbox-4">Check me</label>
+                            </div>
+                            <div class="v-check label-width">
+                                <input type="checkbox" id="cd-checkbox-5">
+                                <label for="cd-checkbox-5">Check me</label>
+                            </div>
+                            <div class="v-check label-width">
+                                <input type="checkbox" id="cd-checkbox-6">
+                                <label for="cd-checkbox-6">Check me</label>
+                            </div>
+                        </div>
+
+                        <div class="v-row">
+                            <div class="v-radio label-width">
+                                <input type="radio" name="radio2" id="cd-radio-4">
+                                <label for="cd-radio-4">Choice me</label>
+                            </div>
+                            <div class="v-radio label-width">
+                                <input type="radio" name="radio2" id="cd-radio-5">
+                                <label for="cd-radio-5">Choice me</label>
+                            </div>
+                            <div class="v-radio label-width">
+                                <input type="radio" name="radio2" id="cd-radio-6">
+                                <label for="cd-radio-6">Choice me</label>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="highlight hidden-mobile">
+                        <a href="javascript:;" data-clipboard-action="copy" data-clipboard-target="#form-base"
+                           data-tootik="复制" class="clipboard-btn">
+                            <img src="images/doc/clippy.svg" width="13" alt="">
+                        </a>
+                        <pre><code id="form-base">&lt;!-- 多选框 --&gt;
+&lt;div class="v-check"&gt;
+    &lt;input type="checkbox" id="cd-checkbox"&gt;
+    &lt;label for="cd-checkbox"&gt;Check me&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;!-- 单选框 --&gt;
+&lt;div class="v-radio"&gt;
+    &lt;input type="radio" name="radio" id="cd-radio"&gt;
+    &lt;label for="cd-radio"&gt;Choice me&lt;/label&gt;
+&lt;/div&gt;
+</code></pre>
+                    </div>
+
+                </div>
+            </div>
+            <!-- 多选&单选end -->
+
+            <!-- 下拉列表 -->
+            <div class="doc-wrap" id="formSelect">
+                <p class="description">下拉列表(select)</p>
+
+                <div class="demo-wrap">
+
+                    <span class="title">预置圆角外观样式,使用时添加 <code>.radius</code> 类</span>
+
+                    <div class="example clearfix">
+
+                        <div class="v-select-group">
+                            <div class="v-select-control">
+                                <label>Select</label>
+                                <select name="" id="" class="v-select">
+                                    <option>New York</option>
+                                    <option>Paris</option>
+                                    <option>Melbourne</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="v-select-group">
+                            <div class="v-select-control radius">
+                                <label>Select</label>
+                                <select name="" id="" class="v-select">
+                                    <option>New York</option>
+                                    <option>Paris</option>
+                                    <option>Melbourne</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="highlight hidden-mobile">
+                        <a href="javascript:;" data-clipboard-action="copy" data-clipboard-target="#form-base"
+                           data-tootik="复制" class="clipboard-btn">
+                            <img src="images/doc/clippy.svg" width="13" alt="">
+                        </a>
+                        <pre><code id="form-base">&lt;!-- 下拉列表 --&gt;
+&lt;div class="v-select-group"&gt;
+    &lt;div class="v-select-control"&gt;
+        &lt;label&gt;Select&lt;/label&gt;
+        &lt;select name="" id="" class="v-select"&gt;
+            &lt;option&gt;New York&lt;/option&gt;
+            &lt;option&gt;Paris&lt;/option&gt;
+            &lt;option&gt;Melbourne&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- 预置圆角下拉列表 --&gt;
+&lt;div class="v-select-group"&gt;
+    &lt;div class="v-select-control radius"&gt;
+        &lt;label&gt;Select&lt;/label&gt;
+        &lt;select name="" id="" class="v-select"&gt;
+            &lt;option&gt;New York&lt;/option&gt;
+            &lt;option&gt;Paris&lt;/option&gt;
+            &lt;option&gt;Melbourne&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+                    </div>
+
+                </div>
+
+                <div class="demo-wrap">
+
+                    <span class="title">
+                        内联&水平排列：<br/>
+                        内联样式仅需使用 <code>.v-select-control</code> .支持 <code>Error</code> 错误提示，不支持 <code>Tips</code> 提示<br/>
+                        水平排列添加 <code>.horizontal</code> 类， 支持响应式 需要配合栅格系统使用 ，更改视口（viewport）大小可以预览效果
+                    </span>
+
+                    <div class="example clearfix">
+
+                        <div class="v-select-control inline">
+                            <label>Address：</label>
+                            <select name="" id="" class="v-select">
+                                <option>New York</option>
+                                <option>Paris</option>
+                                <option>Melbourne</option>
+                            </select>
+                        </div>
+
+                        <div class="v-select-control inline label-width">
+                            <label>Address：</label>
+                            <select name="" id="" class="v-select">
+                                <option>New York</option>
+                                <option>Paris</option>
+                                <option>Melbourne</option>
+                            </select>
+                        </div>
+
+                        <div class="v-select-group v-row">
+                            <div class="v-select-control horizontal">
+                                <label for="username1" class="v-grid-3">Address：</label>
+                                <div class="v-grid-9">
+                                    <select name="" id="" class="v-select">
+                                        <option>New York</option>
+                                        <option>Paris</option>
+                                        <option>Melbourne</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="highlight hidden-mobile">
+                        <a href="javascript:;" data-clipboard-action="copy" data-clipboard-target="#form-base"
+                           data-tootik="复制" class="clipboard-btn">
+                            <img src="images/doc/clippy.svg" width="13" alt="">
+                        </a>
+                        <pre><code id="form-base">&lt;!-- 内联 --&gt;
+&lt;div class="v-select-control inline"&gt;
+    &lt;label&gt;Address：&lt;/label&gt;
+    &lt;select name="" id="" class="v-select"&gt;
+        &lt;option&gt;New York&lt;/option&gt;
+        &lt;option&gt;Paris&lt;/option&gt;
+        &lt;option&gt;Melbourne&lt;/option&gt;
+    &lt;/select&gt;
+&lt;/div&gt;
+
+&lt;div class="v-select-control inline label-width"&gt;
+    &lt;label&gt;Address：&lt;/label&gt;
+    &lt;select name="" id="" class="v-select"&gt;
+        &lt;option&gt;New York&lt;/option&gt;
+        &lt;option&gt;Paris&lt;/option&gt;
+        &lt;option&gt;Melbourne&lt;/option&gt;
+    &lt;/select&gt;
+&lt;/div&gt;
+
+&lt;!-- 水平排列 --&gt;
+&lt;div class="v-select-group v-row"&gt;
+    &lt;div class="v-select-control horizontal"&gt;
+        &lt;label for="username1" class="v-grid-3"&gt;Address：&lt;/label&gt;
+        &lt;div class="v-grid-9"&gt;
+            &lt;select name="" id="" class="v-select"&gt;
+                &lt;option&gt;New York&lt;/option&gt;
+                &lt;option&gt;Paris&lt;/option&gt;
+                &lt;option&gt;Melbourne&lt;/option&gt;
+            &lt;/select&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+                    </div>
+
+                </div>
+
+
+            </div>
+            <!-- 下拉列表end -->
+
+            <!-- 校验状态 -->
+            <div class="doc-wrap" id="formVerify">
+                <p class="description">校验状态</p>
+
+                <div class="demo-wrap">
+
+                    <span class="title">实例</span>
+
+                    <div class="example clearfix">
+
+                        <div class="v-input-group">
+                            <div class="v-input-control error">
+                                <label for="username6">User Name：</label>
+                                <input placeholder="Placeholder" class="v-input" id="username6" type="text" required/>
+                                <span class="warning error">Required field</span>
+                            </div>
+                        </div>
+
+                        <div class="v-select-group">
+                            <div class="v-select-control error">
+                                <label>Address：</label>
+                                <select name="" id="" class="v-select">
+                                    <option>New York</option>
+                                    <option>Paris</option>
+                                    <option>Melbourne</option>
+                                </select>
+                                <span class="warning error">Please select address</span>
+                            </div>
+                        </div>
+
+                        <div class="v-row">
+                            <div class="v-grid-12">
+                                <div class="v-check label-width error">
+                                    <input type="checkbox" id="cd-checkbox-error">
+                                    <label for="cd-checkbox-error">Check me</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="v-row">
+                            <div class="v-grid-12">
+                                <div class="v-radio label-width error">
+                                    <input type="radio" name="radio2" id="cd-radio-error">
+                                    <label for="cd-radio-error">Choice me</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="v-input-group v-row">
+                            <div class="v-input-control horizontal error">
+                                <label for="email4" class="v-grid-3">Email：</label>
+                                <div class="v-grid-9">
+                                    <input placeholder="Placeholder" class="v-input" id="email4" type="email" required/>
+                                    <span class="warning error">Please enter email</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="highlight hidden-mobile">
+                        <a href="javascript:;" data-clipboard-action="copy" data-clipboard-target="#form-base"
+                           data-tootik="复制" class="clipboard-btn">
+                            <img src="images/doc/clippy.svg" width="13" alt="">
+                        </a>
+                        <pre><code id="form-base">&lt;!-- 输入框 --&gt;
+&lt;div class="v-input-group"&gt;
+    &lt;div class="v-input-control error"&gt;
+        &lt;label for="input"&gt;User Name：&lt;/label&gt;
+        &lt;input placeholder="Placeholder" class="v-input" id="input" type="text" required/&gt;
+        &lt;span class="warning error"&gt;Required field&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- 下拉列表 --&gt;
+&lt;div class="v-select-group"&gt;
+    &lt;div class="v-select-control error"&gt;
+        &lt;label&gt;Address：&lt;/label&gt;
+        &lt;select name="" id="" class="v-select"&gt;
+            &lt;option&gt;New York&lt;/option&gt;
+            &lt;option&gt;Paris&lt;/option&gt;
+            &lt;option&gt;Melbourne&lt;/option&gt;
+        &lt;/select&gt;
+        &lt;span class="warning error"&gt;Please select address&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- 多选框 --&gt;
+&lt;div class="v-row"&gt;
+    &lt;div class="v-grid-12"&gt;
+        &lt;div class="v-check label-width error"&gt;
+            &lt;input type="checkbox" id="cd-checkbox-error"&gt;
+            &lt;label for="cd-checkbox-error"&gt;Check me&lt;/label&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- 单选框 --&gt;
+&lt;div class="v-row"&gt;
+    &lt;div class="v-grid-12"&gt;
+        &lt;div class="v-radio label-width error"&gt;
+            &lt;input type="radio" name="radio2" id="cd-radio-error"&gt;
+            &lt;label for="cd-radio-error"&gt;Choice me&lt;/label&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- 水平排列 --&gt;
+&lt;div class="v-input-group v-row"&gt;
+    &lt;div class="v-input-control horizontal error"&gt;
+        &lt;label for="email" class="v-grid-3"&gt;Email：&lt;/label&gt;
+        &lt;div class="v-grid-9"&gt;
+            &lt;input placeholder="Placeholder" class="v-input" id="email" type="email" required/&gt;
+            &lt;span class="warning error"&gt;Please enter email&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+                    </div>
+
+                </div>
+            </div>
+            <!-- 校验状态end -->
+
+
+        </section>
+
+    </div>
+
+    <div class="navigation">
+        <div class="menu-wrap">
+            <span class="ele-name">Form</span>
+            <ul id="nav">
+                <li class="current"><a href="#formExample">基本实例</a></li>
+                <li><a href="#formExtend">扩展样式</a></li>
+                <li><a href="#formSize">尺寸</a></li>
+                <li><a href="#formRequired">必填项</a></li>
+                <li><a href="#formDdisabled">禁用状态</a></li>
+                <li><a href="#formInline">内联样式</a></li>
+                <li><a href="#formUpload">上传文件</a></li>
+                <li><a href="#formTextarea">文本域</a></li>
+                <li><a href="#formCheckRadio">多选和单选框</a></li>
+                <li><a href="#formSelect">下拉列表</a></li>
+                <li><a href="#formVerify">校验状态</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+
+    </footer>
+</main>
+
+<footer>
+    <div class="footer-wrap">
+        footer
+    </div>
+</footer>
+
+
+
+
+<!-- build:js scripts/jquery-3.1.0.min.js -->
+<script src="scripts/jquery-3.1.0.min.js"></script>
+<!-- endbuild -->
+
+<!-- build:js scripts/doc/jquery.nav.js -->
+<script src="scripts/doc/jquery.nav.js"></script>
+<!-- endbuild -->
+
+<!-- build:js scripts/doc/highlight.min.js -->
+<script src="scripts/doc/highlight.min.js"></script>
+<!-- endbuild -->
+
+<!-- build:js scripts/doc/clipboard.min.js -->
+<script src="scripts/doc/clipboard.min.js"></script>
+<!-- endbuild -->
+
+<!-- build:js scripts/doc/document.js -->
+<script src="scripts/doc/document.js"></script>
+<!-- endbuild -->
+
+
+</body>
+</html>
