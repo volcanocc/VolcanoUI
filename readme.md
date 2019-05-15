@@ -1,4 +1,4 @@
-![Icon](https://raw.githubusercontent.com/volcanocc/VolcanoUI/master/images/icon.png)
+![Icon](https://github.com/volcanocc/VolcanoUI/raw/master/images/icon.png)
 
 Volcano UI  v1.0.0
 --------------------------------------
